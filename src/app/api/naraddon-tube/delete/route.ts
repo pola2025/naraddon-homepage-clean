@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { connectDB } from '@/lib/mongodb';
 import { deleteR2Object } from '@/lib/r2';
+import { ObjectId } from 'mongodb';
 
 export const dynamic = 'force-dynamic';
 
@@ -36,7 +37,7 @@ export async function DELETE(request: NextRequest) {
     const collection = db.collection('naraddon-tube');
 
     // 먼저 엔트리를 찾아서 썸네일 URL 확인
-    const entry = await collection.findOne({ _id: entryId });
+    const entry = await collection.findOne({ _id: new ObjectId(entryId) });
 
     if (!entry) {
       return NextResponse.json(
@@ -60,7 +61,7 @@ export async function DELETE(request: NextRequest) {
     }
 
     // MongoDB에서 엔트리 삭제
-    const result = await collection.deleteOne({ _id: entryId });
+    const result = await collection.deleteOne({ _id: new ObjectId(entryId) });
 
     if (result.deletedCount === 0) {
       return NextResponse.json(

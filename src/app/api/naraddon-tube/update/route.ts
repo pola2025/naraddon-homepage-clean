@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { connectDB } from '@/lib/mongodb';
 import { deleteR2Object } from '@/lib/r2';
+import { ObjectId } from 'mongodb';
 
 export const dynamic = 'force-dynamic';
 
@@ -121,7 +122,7 @@ export async function PUT(request: NextRequest) {
     };
 
     const result = await collection.updateOne(
-      { _id: entryId },
+      { _id: new ObjectId(entryId) },
       { $set: updateData }
     );
 
