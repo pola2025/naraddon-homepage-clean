@@ -35,12 +35,24 @@ export async function DELETE(request: NextRequest) {
 
     const client = await clientPromise;
     const db = client.db('naraddon');
-    const collection = db.collection('naraddon-tube');
+    const collection = db.collection('naraddontubeentries'); // Mongoose 디폴트 콜렉션 이름
 
     // 먼저 엔트리를 찾아서 썸네일 URL 확인
-    const entry = await collection.findOne({ _id: new ObjectId(entryId) });
+    console.log('[delete] Finding entry with ID:', entryId);
+
+    // 먼저 문자열 ID로 시도
+    let entry = await collection.findOne({ _id: entryId });
+
+    // 문자열로 못 찾으면 ObjectId로 시도
+    if (!entry && ObjectId.isValid(entryId)) {
+      console.log('[delete] Trying with ObjectId...');
+      entry = await collection.findOne({ _id: new ObjectId(entryId) });
+    }
 
     if (!entry) {
+      // 디버깅: 모든 문서의 ID 확인
+      const allDocs = await collection.find({}).limit(5).toArray();
+      console.log('[delete] Sample IDs in collection:', allDocs.map(d => ({ _id: d._id, type: typeof d._id })));
       return NextResponse.json(
         { message: '해당 항목을 찾을 수 없습니다.' },
         { status: 404 }
@@ -61,8 +73,9 @@ export async function DELETE(request: NextRequest) {
       }
     }
 
-    // MongoDB에서 엔트리 삭제
-    const result = await collection.deleteOne({ _id: new ObjectId(entryId) });
+    // MongoDB에서 엔트리 삭제 (같은 방식으로)
+    const deleteQuery = typeof entry._id === 'string' ? { _id: entryId } : { _id: new ObjectId(entryId) };
+    const result = await collection.deleteOne(deleteQuery);
 
     if (result.deletedCount === 0) {
       return NextResponse.json(

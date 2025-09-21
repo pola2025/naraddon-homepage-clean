@@ -109,7 +109,7 @@ export async function PUT(request: NextRequest) {
 
     const client = await clientPromise;
     const db = client.db('naraddon');
-    const collection = db.collection('naraddon-tube');
+    const collection = db.collection('naraddontubeentries'); // Mongoose 디폴트 콜렉션 이름
 
     const updateData = {
       title: title.trim(),
