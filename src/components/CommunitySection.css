@@ -1,0 +1,960 @@
+/* 나라똔 커뮤니티 섹션 - 나라똔Tube로 전체 변경 */
+.community-section {
+  padding: 20px 0;
+  background: linear-gradient(to bottom, #0a0a0a 0%, #1a1a1a 100%);
+  position: relative;
+  /* border-bottom 제거 */
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.community-section .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 섹션 헤더 */
+.section-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.section-header h2 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #4caf50, #45a049);
+  border-radius: 2px;
+}
+
+.section-header p {
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+}
+
+/* 메인 컨텐츠 영역 */
+.community-content {
+  display: grid;
+  grid-template-columns: 2.2fr 1.3fr;
+  gap: 50px;
+  margin-bottom: 80px;
+}
+
+/* 공통 보드 헤더 */
+.board-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.board-header h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+
+.board-header h3 i {
+  color: #4caf50;
+  font-size: 22px;
+}
+
+.more-btn {
+  background: none;
+  border: 1px solid #ddd;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.more-btn:hover {
+  background: #4caf50;
+  border-color: #4caf50;
+  color: white;
+}
+
+/* 정책분석 게시판 */
+.policy-board {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+}
+
+.policy-posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.policy-post {
+  background: #fafafa;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid #f0f0f0;
+  height: fit-content;
+  position: relative;
+}
+
+.policy-post:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.post-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+.post-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 16px 16px 0 0;
+}
+
+.policy-post:hover .post-image img {
+  transform: scale(1.05);
+}
+
+.post-category {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #4caf50;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Best 배지 */
+.best-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: linear-gradient(135deg, #ffd700 0%, #ffa500 50%, #ff8c00 100%);
+  color: #8b4513;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 3px 10px rgba(255, 215, 0, 0.4);
+  border: 2px solid #fff;
+  animation: subtleGlow 3s ease-in-out infinite;
+  z-index: 10;
+}
+
+/* 은은한 반짝임 효과 */
+.best-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  border-radius: 20px;
+  animation: gentleShine 4s ease-in-out infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.best-badge i {
+  font-size: 12px;
+  color: #ff8c00;
+  filter: drop-shadow(0 1px 2px rgba(139, 69, 19, 0.3));
+}
+
+.best-badge .best-rank {
+  background: #ff8c00;
+  color: white;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 900;
+  margin-left: 2px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes subtleGlow {
+  0%,
+  100% {
+    box-shadow: 0 3px 10px rgba(255, 215, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.5);
+  }
+}
+
+@keyframes gentleShine {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Best 포스트 스타일 */
+.policy-post.best-post {
+  position: relative;
+  overflow: visible;
+}
+
+.policy-post.best-post::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ffd700, #ffa500, #ffd700, #ffa500);
+  border-radius: 18px;
+  z-index: -1;
+  animation: gradientRotate 3s linear infinite;
+}
+
+@keyframes gradientRotate {
+  0% {
+    background: linear-gradient(45deg, #ffd700, #ffa500, #ffd700, #ffa500);
+  }
+  25% {
+    background: linear-gradient(135deg, #ffa500, #ffd700, #ffa500, #ffd700);
+  }
+  50% {
+    background: linear-gradient(225deg, #ffd700, #ffa500, #ffd700, #ffa500);
+  }
+  75% {
+    background: linear-gradient(315deg, #ffa500, #ffd700, #ffa500, #ffd700);
+  }
+  100% {
+    background: linear-gradient(45deg, #ffd700, #ffa500, #ffd700, #ffa500);
+  }
+}
+
+.policy-post.best-post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(255, 215, 0, 0.3);
+}
+
+.post-content {
+  padding: 16px;
+}
+
+.post-content h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 12px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 42px;
+}
+
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #999;
+}
+
+.post-meta .views {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* 사업자 목소리 */
+.business-voice {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+}
+
+.voice-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.voice-item {
+  padding: 18px;
+  background: #fafafa;
+  border-radius: 12px;
+  border-left: 4px solid #4caf50;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: fit-content;
+}
+
+.voice-item:hover {
+  background: #f0f8f0;
+  transform: translateX(5px);
+}
+
+.voice-content h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.voice-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 13px;
+  color: #666;
+}
+
+.voice-meta .author {
+  font-weight: 600;
+  color: #4caf50;
+}
+
+.voice-meta .likes {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #e74c3c;
+}
+
+/* 나라똔Tube 영역 */
+.naraddon-tube {
+  background: transparent;
+  padding: 20px 0;
+  position: relative;
+  overflow: visible;
+  margin: 0;
+  width: 100%;
+  border-top: none;
+  border-bottom: none;
+  box-shadow: none;
+}
+
+.tube-header {
+  text-align: center;
+  margin-bottom: 15px;
+  padding: 0 20px;
+}
+
+.tube-header h3 {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #fff;
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(255, 0, 0, 0.3);
+  letter-spacing: -0.5px;
+  transition: all 0.3s ease;
+}
+
+.tube-header h3:hover {
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(255, 0, 0, 0.5),
+    0 0 40px rgba(255, 0, 0, 0.3);
+}
+
+.tube-header h3 i {
+  color: #fff;
+  font-size: 26px;
+  background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+  padding: 6px 8px;
+  border-radius: 8px;
+  box-shadow:
+    0 4px 15px rgba(255, 0, 0, 0.3),
+    0 0 20px rgba(255, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.tube-header h3:hover i {
+  box-shadow:
+    0 6px 20px rgba(255, 0, 0, 0.4),
+    0 0 30px rgba(255, 0, 0, 0.5),
+    0 0 40px rgba(255, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.tube-header p {
+  font-size: 18px;
+  color: #ccc;
+  margin: 0;
+  opacity: 0.8;
+  font-weight: 300;
+}
+
+/* 태블릿 프레임 */
+.tablet-frame {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* 태블릿 장식 요소 제거 */
+
+.tablet-screen {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* 비디오 캐러셀 */
+.video-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid rgba(255, 0, 0, 0.3);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.carousel-control:hover {
+  background: rgba(255, 0, 0, 0.2);
+  border-color: rgba(255, 0, 0, 0.6);
+  box-shadow:
+    0 0 20px rgba(255, 0, 0, 0.4),
+    0 0 30px rgba(255, 0, 0, 0.2);
+}
+
+.carousel-control.prev {
+  left: 15px;
+}
+
+.carousel-control.next {
+  right: 15px;
+}
+
+.carousel-control i {
+  font-size: 24px;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.carousel-control:hover i {
+  transform: scale(1.2);
+}
+
+.carousel-control:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.carousel-control:disabled:hover {
+  background: rgba(0, 0, 0, 0.8);
+  border-color: rgba(255, 0, 0, 0.3);
+  box-shadow: none;
+}
+
+/* 비디오 슬라이더 */
+.video-slider {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  overflow-x: hidden;
+  padding: 20px 60px;
+  position: relative;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+.video-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0;
+  width: 100%;
+  justify-content: center;
+}
+
+.video-track .video-card {
+  flex: 0 0 calc((100vw - 140px) / 6);
+  min-width: 200px;
+  max-width: 280px;
+}
+
+/* 비디오 카드 */
+.video-card {
+  background: linear-gradient(to bottom, #1a1a1a 0%, #0f0f0f 100%);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.video-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow:
+    0 12px 30px rgba(255, 0, 0, 0.25),
+    0 0 0 1px rgba(255, 0, 0, 0.5);
+  border-color: rgba(255, 0, 0, 0.3);
+}
+
+.video-card.active {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(255, 0, 0, 0.3);
+  border-color: #ff0000;
+}
+
+.video-thumbnail {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(2px);
+}
+
+.video-card:hover .play-overlay {
+  opacity: 1;
+}
+
+.play-overlay i {
+  font-size: 60px;
+  color: rgba(255, 255, 255, 0.95);
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+  position: relative;
+}
+
+.video-card:hover .play-overlay i {
+  transform: scale(1.2);
+}
+
+.video-duration {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.video-card .video-info {
+  padding: 16px;
+  background: transparent;
+  position: relative;
+}
+
+.video-card .video-info::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 14px;
+  right: 14px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+.video-card .video-info h5 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #f0f0f0;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.video-card:hover .video-info h5 {
+  color: #fff;
+}
+
+.video-card .video-meta {
+  font-size: 13px;
+  color: #999;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.video-card .video-meta .channel {
+  color: #4caf50;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.video-card .video-meta .channel::before {
+  content: '•';
+  color: #4caf50;
+  font-weight: 700;
+}
+
+/* 인디케이터 */
+.video-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background: rgba(255, 0, 0, 0.8);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  transform: scale(1.2);
+}
+
+.indicator:hover {
+  background: rgba(255, 0, 0, 0.5);
+}
+
+/* 비디오 모달 */
+.video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.video-modal .modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  background: #1a1a1a;
+  border-radius: 20px;
+  overflow: hidden;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+.modal-close i {
+  font-size: 24px;
+  color: white;
+}
+
+.modal-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #000;
+}
+
+.modal-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.modal-info {
+  padding: 30px;
+  background: #1a1a1a;
+}
+
+.modal-info h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.modal-meta {
+  display: flex;
+  gap: 20px;
+  font-size: 16px;
+  color: #999;
+}
+
+.modal-meta .channel {
+  color: #4caf50;
+  font-weight: 600;
+}
+
+.modal-meta .views {
+  color: #ccc;
+}
+
+/* 반응형 */
+@media (max-width: 1400px) {
+  .policy-posts {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .community-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .tablet-frame {
+    margin: 0;
+  }
+
+  .video-track {
+    gap: 15px;
+    padding: 0 60px;
+  }
+
+  .video-track .video-card {
+    flex: 0 0 calc((100vw - 120px - 60px) / 4);
+    min-width: 260px;
+  }
+}
+
+@media (max-width: 900px) {
+  .voice-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .community-section {
+    padding: 60px 0;
+  }
+
+  .section-header h2 {
+    font-size: 32px;
+  }
+
+  .policy-board,
+  .business-voice {
+    padding: 30px;
+  }
+
+  .policy-posts {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .voice-list {
+    grid-template-columns: 1fr;
+  }
+
+  .naraddon-tube {
+    padding: 30px 0;
+    margin: 0;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
+
+  .tube-header h3 {
+    font-size: 24px;
+  }
+
+  .tablet-frame {
+    padding: 15px 0;
+    margin: 0;
+  }
+
+  /* 태블릿 장식 요소는 이미 제거됨 */
+
+  .tablet-screen {
+    padding: 20px 10px;
+  }
+
+  .video-track {
+    gap: 12px;
+    padding: 0 15px;
+  }
+
+  .video-track .video-card {
+    flex: 0 0 calc((100vw - 30px - 12px) / 2);
+    min-width: 300px;
+  }
+
+  .carousel-control {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel-control i {
+    font-size: 20px;
+  }
+
+  .modal-content {
+    width: 95%;
+    margin: 20px;
+  }
+
+  .modal-info {
+    padding: 20px;
+  }
+
+  .modal-info h4 {
+    font-size: 18px;
+  }
+
+  .modal-meta {
+    font-size: 14px;
+    flex-wrap: wrap;
+  }
+}

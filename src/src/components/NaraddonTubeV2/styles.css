@@ -1,0 +1,317 @@
+/* 나라똔튜브 V2 - 띠배너형 스타일 */
+
+.naraddon-tube-v2 {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #fafafa 0%, #f0f0f0 100%);
+  min-height: 100vh;
+}
+
+.naraddon-tube-v2 .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 헤더 */
+.naraddon-tube-v2 .header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.naraddon-tube-v2 .title {
+  font-size: 36px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4caf50, #81c784);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+}
+
+.naraddon-tube-v2 .subtitle {
+  font-size: 18px;
+  color: #607d8b;
+}
+
+/* 배너 리스트 */
+.naraddon-tube-v2 .banners-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* 배너 아이템 */
+.naraddon-tube-v2 .banner-item {
+  display: flex;
+  gap: 20px;
+  background: white;
+  border-radius: 16px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 200px;
+}
+
+.naraddon-tube-v2 .banner-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.naraddon-tube-v2 .banner-item.reversed {
+  flex-direction: row-reverse;
+}
+
+.naraddon-tube-v2 .banner-item.expanded {
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+}
+
+/* 이미지 섹션 */
+.naraddon-tube-v2 .banner-image-section {
+  flex: 0 0 35%;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.naraddon-tube-v2 .banner-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.naraddon-tube-v2 .placeholder-4-3 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.naraddon-tube-v2 .placeholder-text {
+  font-size: 24px;
+  font-weight: 600;
+  color: #4caf50;
+}
+
+.naraddon-tube-v2 .ratio-label {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 12px;
+  color: #4caf50;
+  opacity: 0.6;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.naraddon-tube-v2 .image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.naraddon-tube-v2 .banner-image-section:hover .image-overlay {
+  opacity: 1;
+}
+
+.naraddon-tube-v2 .banner-title {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* 비디오 섹션 */
+.naraddon-tube-v2 .banner-videos-section {
+  flex: 1;
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  align-items: center;
+}
+
+.naraddon-tube-v2 .video-item {
+  flex: 1;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #000;
+  transition: all 0.3s ease;
+  height: 168px;
+}
+
+.naraddon-tube-v2 .video-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.naraddon-tube-v2 .video-item.playing {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  height: auto;
+  z-index: 10;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.naraddon-tube-v2 .banner-item.expanded .banner-videos-section {
+  position: relative;
+  min-height: 400px;
+}
+
+/* 비디오 썸네일 */
+.naraddon-tube-v2 .video-thumbnail {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.naraddon-tube-v2 .video-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.naraddon-tube-v2 .video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.naraddon-tube-v2 .video-item:hover .video-overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.naraddon-tube-v2 .play-icon {
+  width: 48px;
+  height: 48px;
+  color: white;
+  margin-bottom: 8px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.naraddon-tube-v2 .video-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+}
+
+.naraddon-tube-v2 .video-title {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  text-align: center;
+}
+
+/* 비디오 플레이어 */
+.naraddon-tube-v2 .video-player-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.naraddon-tube-v2 .video-player {
+  width: 100%;
+  height: 360px;
+  border-radius: 12px;
+}
+
+/* 호버 효과 */
+.naraddon-tube-v2 .banner-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(76, 175, 80, 0.05) 50%, transparent 100%);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+  pointer-events: none;
+}
+
+.naraddon-tube-v2 .banner-item:hover::before {
+  transform: translateX(100%);
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  .naraddon-tube-v2 .banner-image-section {
+    flex: 0 0 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .naraddon-tube-v2 .banner-item,
+  .naraddon-tube-v2 .banner-item.reversed {
+    flex-direction: column;
+  }
+
+  .naraddon-tube-v2 .banner-image-section {
+    flex: 1;
+    min-height: 200px;
+  }
+
+  .naraddon-tube-v2 .banner-videos-section {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .naraddon-tube-v2 .video-item {
+    width: 100%;
+    height: 200px;
+  }
+
+  .naraddon-tube-v2 .video-item.playing {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .naraddon-tube-v2 .banner-item.expanded .banner-videos-section {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .naraddon-tube-v2 .title {
+    font-size: 28px;
+  }
+
+  .naraddon-tube-v2 .subtitle {
+    font-size: 16px;
+  }
+
+  .naraddon-tube-v2 .placeholder-text {
+    font-size: 20px;
+  }
+
+  .naraddon-tube-v2 .banner-title {
+    font-size: 18px;
+  }
+}

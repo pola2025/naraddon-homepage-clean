@@ -1,0 +1,850 @@
+{
+  "questions": [
+    {
+      "title": "2025년 최저임금 인상 후 야간 운영 어떻게 버티시나요?",
+      "content": "시급 10030원 확정되면서 야간 인력 2교대 유지가 빠듯합니다. 연장수당 계산과 근무표 조정 팁이 있으면 공유 부탁드려요.",
+      "category": "employment",
+      "author": {
+        "nickname": "pebbletone",
+        "businessType": "24시 토스트 카페",
+        "region": "서울 마포",
+        "yearsInBusiness": 4
+      },
+      "metrics": {
+        "viewCount": 128,
+        "commentCount": 5,
+        "scrapCount": 9
+      },
+      "flags": {
+        "needsExpertReply": true,
+        "needsExaminerReply": false
+      },
+      "sources": [
+        {
+          "title": "대한민국의 최저임금",
+          "publisher": "위키백과",
+          "url": "https://ko.wikipedia.org/wiki/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%EC%9D%98_%EC%B5%9C%EC%A0%80%EC%9E%84%EA%B8%88",
+          "publishedAt": "2025-01-01"
+        }
+      ],
+      "answers": [
+        {
+          "role": "expert",
+          "displayName": "이수진 노무사",
+          "title": "공인노무사",
+          "organization": "나라똔 노무지원센터",
+          "headline": "2025년 최저임금 대응 근무표 조정 체크",
+          "content": "야간 가산(22~06시 1.5배)을 더하면 시급 15045원으로 계산됩니다. 2주 단위 탄력근로제 신고와 고용부 근로시간 컨설팅(2025년 7월 공고)을 활용하면 야간 인건비 분산에 도움이 됩니다.",
+          "isPinned": true,
+          "sources": [
+            {
+              "title": "고용노동부 보도자료 - 2025년 최저임금 고시",
+              "publisher": "고용노동부",
+              "url": "https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=15349",
+              "publishedAt": "2024-07-19"
+            }
+          ]
+        },
+        {
+          "role": "community",
+          "displayName": "cloverbyte",
+          "content": "야간 시간을 6시간+4시간으로 나눠 주4일/주3일 패턴으로 돌리니 가산수당이 안정됐습니다. 급여 명세서는 홈택스 표준 서식을 써서 자동화하고 있어요."
+        }
+      ]
+    },
+    {
+      "title": "주52시간 감독 강화 소식, 편의점 야간 스케줄 어떻게 손보셨나요?",
+      "content": "임금체불 시 최고 5년형까지 언급된 단속 강화 기사 때문에 불안합니다. 주말 야간과 택배 픽업이 겹칠 때 안전하게 인력을 배치하려면 어떤 절차가 필요할까요?",
+      "category": "employment",
+      "author": {
+        "nickname": "sunsetmetro",
+        "businessType": "무인+직원 혼합 편의점",
+        "region": "인천 연수",
+        "yearsInBusiness": 2
+      },
+      "metrics": {
+        "viewCount": 174,
+        "commentCount": 7,
+        "scrapCount": 11
+      },
+      "flags": {
+        "needsExpertReply": true,
+        "needsExaminerReply": true
+      },
+      "sources": [
+        {
+          "title": "임금체불땐 최고 5년형…알바도 주52시간 넘기면 점주 징역형",
+          "publisher": "매일경제",
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5jVnpQVmFpUVNTZUl3TnZONWVhLVp3LUJORWF0MWtmSVEzaGxBNEFNajhyNnJ5QjFWZVBUeDJvS3hNYWlvc19zRG9hWnduYTdVbmFtWA?oc=5",
+          "publishedAt": "2025-09-02"
+        }
+      ],
+      "answers": [
+        {
+          "role": "expert",
+          "displayName": "박지원 노무사",
+          "title": "공인노무사",
+          "organization": "노무법인 페어워크",
+          "headline": "주52시간 지도점검 대비 체크리스트",
+          "content": "2025년 3분기 생활밀착 업종 합동점검이 예고돼 있어요. 피크 시간에는 하루 4시간 단시간 근로자 3인 교대로 나눠 기록하고, 휴일근로는 사전 서면합의와 근무일지를 3년 보관해야 과태료를 피할 수 있습니다.",
+          "isPinned": true,
+          "sources": [
+            {
+              "title": "고용노동부 주52시간 지도점검 계획",
+              "publisher": "고용노동부",
+              "url": "https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=15690",
+              "publishedAt": "2025-08-30"
+            }
+          ]
+        },
+        {
+          "role": "examiner",
+          "displayName": "정하늘 심사관",
+          "title": "기업심사관",
+          "organization": "나라똔 기업심사센터",
+          "headline": "현장 점검 시 확인하는 증빙",
+          "content": "근무기록은 POS 로그와 CCTV 타임라인을 동시에 확인합니다. 무인 시간대 원격 모니터링 일지를 캡처 보관하고, 야간 택배 처리 시간은 외주 계약서로 위장도급이 아니라는 점을 증명해 주세요.",
+          "isPinned": true,
+          "sources": [
+            {
+              "title": "나라똔 기업심사 매뉴얼 2025 Q3",
+              "publisher": "나라똔",
+              "url": "https://docs.naraddon.kr/audit/2025q3",
+              "publishedAt": "2025-08-25"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "공과금 지원 시행 앞두고 선납분도 인정될까요?",
+      "content": "연 50만원까지 전기·가스요금 지원된다는 발표가 있었는데 6월 말에 미리 납부한 금액도 소급 인정이 되는지 헷갈립니다. 경험 있으신 분 알려주세요.",
+      "category": "utilities",
+      "author": {
+        "nickname": "northloop",
+        "businessType": "수제 베이커리",
+        "region": "부산 수영",
+        "yearsInBusiness": 6
+      },
+      "metrics": {
+        "viewCount": 96,
+        "commentCount": 3,
+        "scrapCount": 6
+      },
+      "flags": {
+        "needsExpertReply": true,
+        "needsExaminerReply": false
+      },
+      "sources": [
+        {
+          "title": "소상공인 전기·가스요금, 年 최대 50만원 지원한다",
+          "publisher": "조선일보",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOaXJqWkNlVUtLYjRqWmZ1TmpVOG9MZ2xMNXlfRzd6RTFfcGcxeUNManQwdEhOdjNwcDdkdER2Tnd1RmNRdnlUMGVLQjA2OXV6a2NVdEFTdkJNNEZzNDNRNU5DSEJ5VDVPcVNWMTFZOW41VG1vTVd0S3Y2anMzOU50YlZ1UnlMb3RtakVma0lB0gGiAUFVX3lxTE83alNHOXNTcmtwNmlRMXNpQlJnV1k2a2wzeE9GQWJUV1BrZ2xBQmR1WkxnRzMzZXdkQzRxOFFfcklLYlJCTGVEc21nVVRDTUs3ZmQ5VFZLMXI0MXFvelhwanJ2YUQxdjR4WjRueUU5X2UxcGFhZVRCMnAyZVdyTDJjdjR2RGdrNWFtQ2x3U21jS2lDZ3JUak0waFBTUmRWUlRYdw?oc=5",
+          "publishedAt": "2025-04-19"
+        }
+      ],
+      "answers": [
+        {
+          "role": "expert",
+          "displayName": "김유나 컨설턴트",
+          "title": "에너지복지 상담사",
+          "organization": "에너지복지상담센터",
+          "content": "기준일(7월 22일) 이전에 납부된 금액도 고지서에 납부일과 계약번호가 남아 있으면 인정됩니다. 전자고지 PDF와 계좌 이체 내역을 함께 첨부하면 심사 속도가 빨라집니다.",
+          "isPinned": true,
+          "sources": [
+            {
+              "title": "소상공인 공과금 지원 세부 시행계획",
+              "publisher": "소상공인시장진흥공단",
+              "url": "https://www.sbiz.or.kr/sup/notice/",
+              "publishedAt": "2025-07-05"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "7월 22일 공과금 지원 신청 준비물 무엇인가요?",
+      "content": "전기·가스·수도요금 지원이 7월 22일부터 시작된다는데 사업장 증빙과 신청 포털 오픈 일정이 궁금합니다.",
+      "category": "utilities",
+      "author": {
+        "nickname": "stoneatlas",
+        "businessType": "사진 스튜디오",
+        "region": "서울 연남",
+        "yearsInBusiness": 3
+      },
+      "metrics": {
+        "viewCount": 141,
+        "commentCount": 4,
+        "scrapCount": 8
+      },
+      "flags": {
+        "needsExpertReply": true,
+        "needsExaminerReply": true
+      },
+      "sources": [
+        {
+          "title": "소상공인 '전기·가스·수도요금 지원' 근거 마련…22일부터 시행",
+          "publisher": "대한민국 정책브리핑",
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5KQXJtRF9YYjJJZTJCQS0yN3lobGVKSVhHM1hoeDBJV0IxajFkQlJ5bTk5eXZ1N1JDTjYzOEg5NFBKUDdWUTZHWGpnd0R0REtJaGFHQi1yMTM1WXpGdDZzMHI4T2MyMXI5OUxsWQ?oc=5",
+          "publishedAt": "2025-07-01"
+        }
+      ],
+      "answers": [
+        {
+          "role": "expert",
+          "displayName": "정세호 팀장",
+          "title": "정책자금 컨설턴트",
+          "organization": "소상공인시장진흥공단",
+          "headline": "공과금 지원 사전 점검",
+          "content": "신청은 소상공인마당에서 진행되고 사업자등록증, 최근 3개월 요금 고지서, 전기·가스 계약서 사본을 스캔해 두면 추가 서류 요청이 줄어듭니다.",
+          "isPinned": true,
+          "sources": [
+            {
+              "title": "중기부 보도자료 - 소상공인 3대 지원",
+              "publisher": "중소벤처기업부",
+              "url": "https://www.mss.go.kr/site/smba/ex/bbs/View.do?cbIdx=86&bcIdx=1050246",
+              "publishedAt": "2025-06-27"
+            }
+          ]
+        },
+        {
+          "role": "examiner",
+          "displayName": "오은별 심사관",
+          "title": "기업심사관",
+          "organization": "나라똔 기업심사센터",
+          "headline": "현장 심사에서 자주 누락되는 항목",
+          "content": "계약 계좌와 사업자 통장이 일치하는지, 에너지 절감 계획서를 500자 이내로 제출했는지 꼭 확인합니다. 보정 요청은 48시간 내 답변해야 지연이 없습니다.",
+          "isPinned": true,
+          "sources": [
+            {
+              "title": "나라똔 공과금 심사 체크리스트",
+              "publisher": "나라똔",
+              "url": "https://docs.naraddon.kr/finance/utility-2025",
+              "publishedAt": "2025-07-04"
+            }
+          ]
+        },
+        {
+          "role": "community",
+          "displayName": "mellowwave",
+          "content": "서울시 에너지효율화 사업 참여 내역을 첨부했더니 추가 전화 없이 승인됐습니다. 지자체 지원 이력 있으면 함께 올려보세요."
+        }
+      ]
+    },
+    {
+      "title": "고효율기기 지원 신청, 제과점 쇼케이스도 대상인가요?",
+      "content": "전기요금 절감을 위해 쇼케이스랑 제빙기를 교체하려는데 고효율기기 지원 대상인지, 견적서는 몇 건 준비해야 하는지 궁금합니다.",
+      "category": "utilities",
+      "author": {
+        "nickname": "softlinen",
+        "businessType": "동네 제과점",
+        "region": "대구 중구",
+        "yearsInBusiness": 5
+      },
+      "metrics": {
+        "viewCount": 82,
+        "commentCount": 2,
+        "scrapCount": 4
+      },
+      "flags": {
+        "needsExpertReply": false,
+        "needsExaminerReply": false
+      },
+      "sources": [
+        {
+          "title": "소상공인 전기요금 줄일 기회, 고효율기기 지원 신청하세요",
+          "publisher": "데일리대구경북뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBKRjlJRjVodjFoRXlTcFgwWDd0LUtxTzFURl9RQVVXcS10SHJ4SlhKN0pwUWJET2RRS2RvemR2WW9kWkZTS3Ftbl9GREp0SXM2QkVvdk1Ud083Ny1RLTcwbzZ0Q28?oc=5",
+          "publishedAt": "2025-07-22"
+        }
+      ],
+      "answers": [
+        {
+          "role": "community",
+          "displayName": "violetgram",
+          "content": "쇼케이스는 냉동·냉장 모두 가능했고, 제빙기는 에너지 소비효율 1등급 모델만 승인됐습니다. 두 곳 견적서를 올리니 일주일 만에 결과가 나왔어요."
+        }
+      ]
+    },
+    {
+      "title": "전기·공제 납입 실적 신용평가 반영 준비 어떻게 하나요?",
+      "content": "9월부터 전기요금과 공제 납입이 신용평가에 들어간다는데 기존 카드 매출 외에 어떤 자료를 추가로 제출해야 하는지 궁금합니다.",
+      "category": "finance",
+      "author": {
+        "nickname": "lanehorizon",
+        "businessType": "바닷가 카페",
+        "region": "강릉 안목",
+        "yearsInBusiness": 3
+      },
+      "metrics": {
+        "viewCount": 104,
+        "commentCount": 4,
+        "scrapCount": 5
+      },
+      "flags": {
+        "needsExpertReply": true,
+        "needsExaminerReply": false
+      },
+      "sources": [
+        {
+          "title": "소상공인 9월부터 '전기요금·공제납입'으로 신용평가",
+          "publisher": "전자신문",
+          "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5nUG5LY2JJU01laWJqbnp1SWk2QTNzendiM0ZaT2tBUG9ZaGZQSS1ZMGpNZWV6RTJDLVMxTXpmQy11U1Zjd0xMekExZFQ5Zw?oc=5",
+          "publishedAt": "2025-07-09"
+        }
+      ],
+      "answers": [
+        {
+          "role": "expert",
+          "displayName": "민서현 팀장",
+          "title": "신용상담 팀장",
+          "organization": "신용보증재단",
+          "content": "한전과 도시가스 전자고지 PDF, 소상공인 공제회 납입증명서를 업로드하면 CB사에서 자동 반영합니다. 3개월 이상 연속 납부 이력이 확인되면 추가 자료는 요구되지 않습니다.",
+          "isPinned": true,
+          "sources": [
+            {
+              "title": "전자신문 - 전기요금·공제납입 신용평가 기사",
+              "publisher": "전자신문",
+              "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5nUG5LY2JJU01laWJqbnp1SWk2QTNzendiM0ZaT2tBUG9ZaGZQSS1ZMGpNZWV6RTJDLVMxTXpmQy11U1Zjd0xMekExZFQ5Zw?oc=5",
+              "publishedAt": "2025-07-09"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2025년 정책자금 제도 변화, 우선 확인해야 할 자격은 무엇인가요?",
+      "content": "정책브리핑에서 올해 정책자금 구조가 바뀌었다고 하는데 매출 50억 이하 사업자가 바로 확인해야 할 자격 변화와 한도 조정이 무엇인지 정리 부탁드립니다.",
+      "category": "funding",
+      "author": {
+        "nickname": "winteratlas",
+        "businessType": "도시형 화원",
+        "region": "서울 강남",
+        "yearsInBusiness": 7
+      },
+      "metrics": {
+        "viewCount": 210,
+        "commentCount": 8,
+        "scrapCount": 18
+      },
+      "flags": {
+        "needsExpertReply": true,
+        "needsExaminerReply": false
+      },
+      "sources": [
+        {
+          "title": "2025년 확 달라진 소상공인·중소기업 정책자금 총정리",
+          "publisher": "대한민국 정책브리핑",
+          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOSkxJbFJMaHNzd0lfT216ZzBnaFpOU0lSOHRFRHFOSzdlSnJaUUFQY0xpd0tWenQxTFF0bk56emhXWGN4SUJCWjRTX0lPTUQwZmQ5TmgyUWZyVVpjaU0zVTAtNFpuVHdnQ3g1N0ZDTG94VmJiam5LMURLanJVd29raFp3?oc=5",
+          "publishedAt": "2025-02-03"
+        }
+      ],
+      "answers": [
+        {
+          "role": "expert",
+          "displayName": "조현아 센터장",
+          "title": "정책자금 센터장",
+          "organization": "소상공인시장진흥공단",
+          "content": "2025년부터 매출 50억 미만 기업은 지역신보 협약보증을 먼저 받아야 합니다. 친환경 설비 투자 한도는 3억에서 5억으로 확대됐으니 업종별로 적용 여부를 확인하세요.",
+          "isPinned": true,
+          "sources": [
+            {
+              "title": "정책브리핑 - 2025년 정책자금 총정리",
+              "publisher": "대한민국 정책브리핑",
+              "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOSkxJbFJMaHNzd0lfT216ZzBnaFpOU0lSOHRFRHFOSzdlSnJaUUFQY0xpd0tWenQxTFF0bk56emhXWGN4SUJCWjRTX0lPTUQwZmQ5TmgyUWZjaU0zVTAtNFpuVHdnQ3g1N0ZDTG94VmJiam5LMURLanJVd29raFp3?oc=5",
+              "publishedAt": "2025-02-03"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "배달·택배비 최대 30만원 지원, 자부담 비율은 어떻게 되나요?",
+      "content": "2월 17일부터 신청하는 배달·택배비 지원을 보려고 합니다. 배달앱을 쓰지 않는 매장도 대상인지, 영수증만으로 증빙 가능한지 궁금합니다.",
+      "category": "logistics",
+      "author": {
+        "nickname": "dawnmusic",
+        "businessType": "정육·반찬 가게",
+        "region": "서울 청량리",
+        "yearsInBusiness": 12
+      },
+      "metrics": {
+        "viewCount": 188,
+        "commentCount": 6,
+        "scrapCount": 13
+      },
+      "flags": {
+        "needsExpertReply": true,
+        "needsExaminerReply": false
+      },
+      "sources": [
+        {
+          "title": "소상공인 배달·택배비 최대 30만원 지원… 17일부터 신청",
+          "publisher": "조선일보",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNNjEwVWhUc0xPZzJZR01QRE1Qa2Y1eG9HdnV6WFVteE9nYlpOYW9SZHpFajU2SDR5SWhHZzBVVkxEamhScFlyMlM3ZnRiZ1ppR21zSjBIamFPMGY1Zk1pTmNHZzlXZVh4MTE4RWtkS2c4bFkxd0p1VGZ0SVR0b3lZenRpZUZlcGJX0gGcAUFVX3lxTE53N1U5a09QbXRac2lMV1JKQ0Npa0lWZ0l1V29rM25lc1dRNkJzMGRXTWVvZGdTSndwSkkydVJXZGZxYWZaZ1pIaGplUTktOVhEUVlGdW55a1pNTXlpWGVpcDdmSTh3OF9MaXQxS3N3VWZaaWt4bkxsbmtGTHBIblZSLXBaU3NyNzhKYXJ5YzJidDJoZDMwOG5xc2lodQ?oc=5",
+          "publishedAt": "2025-02-09"
+        }
+      ],
+      "answers": [
+        {
+          "role": "expert",
+          "displayName": "이강민 단장",
+          "title": "물류혁신 단장",
+          "organization": "중소벤처기업부",
+          "content": "배달앱 미사용 점포도 손택배 계약서나 퀵서비스 영수증이 있으면 인정됩니다. 정부가 70%를 지원하고 자부담 30%가 필요하며, 선지급 후 정산 방식입니다.",
+          "isPinned": true,
+          "sources": [
+            {
+              "title": "중소벤처기업부 - 배달·택배비 지원 공고",
+              "publisher": "중소벤처기업부",
+              "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNNjEwVWhUc0xPZzJZR01QRE1Qa2Y1eG9HdnV6WFVteE9nYlpOYW9SZHpFajU2SDR5SWhHZzBVVkxEamhScFlyMlM3ZnRiZ1ppR21zSjBIamFPMGY1Zk1pTmNHZzlXZVh4MTE4RWtkS2c4bFkxd0p1VGZ0SVR0b3lZenRpZUZlcGJX0gGcAUFVX3lxTE53N1U5a09QbXRac2lMV1JKQ0Npa0lWZ0l1V29rM25lc1dRNkJzMGRXTWVvZGdTSndwSkkydVJXZGZxYWZaZ1pIaGplUTktOVhEUVlGdW55a1pNTXlpWGVpcDdmSTh3OF9MaXQxS3N3VWZaaWt4bkxsbmtGTHBIblZSLXBaU3NyNzhKYXJ5YzJidDJoZDMwOG5xc2lodQ?oc=5",
+              "publishedAt": "2025-02-09"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "KB국민은행 비대면 정책자금 대출, 실사 없이 진행되나요?",
+      "content": "KB국민은행이 비대면으로 정책자금을 연계한다는 기사를 봤습니다. 서류 업로드만으로 끝나는지, 추가 방문이 필요한지 경험 공유 부탁드립니다.",
+      "category": "funding",
+      "author": {
+        "nickname": "frostypen",
+        "businessType": "수제맥주 펍",
+        "region": "수원 장안",
+        "yearsInBusiness": 4
+      },
+      "metrics": {
+        "viewCount": 142,
+        "commentCount": 5,
+        "scrapCount": 9
+      },
+      "flags": {
+        "needsExpertReply": false,
+        "needsExaminerReply": false
+      },
+      "sources": [
+        {
+          "title": "[2025 상반기 히트상품] KB국민은행, 소상공인 정책자금대출 비대면 서비스 오픈",
+          "publisher": "스포츠동아",
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9rM1dZajhWb0tRSE9pcWZITWtWOUllRkJOT2k2Q0VsZGwyaVFYb3BZUlQ3TTFOYWlUaFZBZFl2VVk2WEhPQXd3UnBnTTVnMnQ1ZWUtRGM1RGVXRk5GUmRyT3kwOG9ueXcxS2pGM3dyQUlUbzA?oc=5",
+          "publishedAt": "2025-06-25"
+        }
+      ],
+      "answers": [
+        {
+          "role": "community",
+          "displayName": "livelymoss",
+          "content": "앱에서 정책자금 진단표만 입력하고 국세청 매출 자료를 연동하니 지점 방문 없이 3영업일 만에 약정 문자를 받았습니다."
+        }
+      ]
+    },
+    {
+      "title": "토스뱅크 정책자금 대리대출 써보신 분 계신가요?",
+      "content": "인터넷은행 최초로 정책자금 대리대출을 한다고 들었습니다. 금리 우대나 한도 차이가 있는지, 필요한 서류가 무엇인지 궁금합니다.",
+      "category": "funding",
+      "author": {
+        "nickname": "quietember",
+        "businessType": "공방 카페",
+        "region": "광주 남구",
+        "yearsInBusiness": 3
+      },
+      "metrics": {
+        "viewCount": 131,
+        "commentCount": 4,
+        "scrapCount": 7
+      },
+      "flags": {
+        "needsExpertReply": false,
+        "needsExaminerReply": false
+      },
+      "sources": [
+        {
+          "title": "[단독] 토스뱅크, 인터넷은행 최초 소상공인 정책자금 대리대출 취급",
+          "publisher": "전자신문",
+          "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1CZ3BkSE5rRGFqZWc0MDg0QUdNc2pwZTBpYXZiWWVwYWFOY212Snl4UEZhZEpTUno4YWh3dURBSlpiaUZSVGlvWVhpaXNadw?oc=5",
+          "publishedAt": "2025-07-08"
+        }
+      ],
+      "answers": [
+        {
+          "role": "community",
+          "displayName": "glowfield",
+          "content": "토스뱅크에서 신청했는데 보증재단 심사는 기존과 동일했고 금리는 기준금리에 0.6% 가산이었습니다. 모든 서류를 전자약정으로 처리했습니다."
+        }
+      ]
+    },
+    {
+      "title": "정책자금 설명회 참여 시 준비해야 할 자료 있을까요?",
+      "content": "서울주얼리지원센터와 소진공이 설명회를 연다는데 현장에서 상담받으려면 어떤 자료를 준비해야 했는지 궁금합니다.",
+      "category": "funding",
+      "author": {
+        "nickname": "driftwood",
+        "businessType": "수제 주얼리",
+        "region": "서울 종로",
+        "yearsInBusiness": 2
+      },
+      "metrics": {
+        "viewCount": 77,
+        "commentCount": 2,
+        "scrapCount": 3
+      },
+      "flags": {
+        "needsExpertReply": false,
+        "needsExaminerReply": false
+      },
+      "sources": [
+        {
+          "title": "서울주얼리지원센터·소상공인시장진흥공단 협업 소상공인 정책자금 설명회 개최",
+          "publisher": "뉴스와이어",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBma2FWcWV0UF9icHhRLUo5SEsyV3EtcE1QTlZ0cjhUMGQtWUY0ZmpySnRaNXZtYUZyN25Ma2VCYUZVaTMwUUNwbUpFYk4wd1VYcGcyLUU3bC0xQUcxMHow?oc=5",
+          "publishedAt": "2025-08-28"
+        }
+      ],
+      "answers": [
+        {
+          "role": "community",
+          "displayName": "springleaf",
+          "content": "사업계획서 초안과 최근 손익계산서를 출력해 갔더니 현장에서 바로 우선심사 예약을 잡아줬어요."
+        }
+      ]
+    },
+    {
+      "title": "카드수수료 0.1%p 인하, 정산 시점부터 바로 적용될까요?",
+      "content": "2월 14일부터 영세·중소가맹점 카드 수수료율이 내려간다는데 기존 계약 상태 그대로 자동 적용되는지, 별도 신청이 필요한지 궁금합니다.",
+      "category": "fees",
+      "author": {
+        "nickname": "opalstreet",
+        "businessType": "로스터리 카페",
+        "region": "서울 성수",
+        "yearsInBusiness": 5
+      },
+      "metrics": {
+        "viewCount": 165,
+        "commentCount": 5,
+        "scrapCount": 10
+      },
+      "flags": {
+        "needsExpertReply": true,
+        "needsExaminerReply": false
+      },
+      "sources": [
+        {
+          "title": "영세·중소가맹점 카드 수수료율 최대 0.1%p 인하…수수료 부담 완화",
+          "publisher": "대한민국 정책브리핑",
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9ZbVdmZUhwZnU0OS1XMV9FaDlQN1JUcEx5aHJWQ1NlOFZZOFdkYW04TUdyM2UyQS14aUpFQkdxMHRkcm9YbVNoX0JSeGZna0c1aHoxTkkzN21fb0phMjZ6aUFoTE5VdjBrZ1U5Sg?oc=5",
+          "publishedAt": "2025-02-13"
+        }
+      ],
+      "answers": [
+        {
+          "role": "expert",
+          "displayName": "이도현 국장",
+          "title": "여신정책 국장",
+          "organization": "금융위원회",
+          "content": "여신금융협회 고시에 따라 2월 14일 이후 승인 건부터 자동으로 인하 수수료가 적용됩니다. 최근 매출이 줄었다면 국세청 신고 자료로 가맹점 분류 재심사를 요청하세요.",
+          "isPinned": true,
+          "sources": [
+            {
+              "title": "금융위원회 - 2025년 카드수수료 조정",
+              "publisher": "금융위원회",
+              "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9ZbVdmZUhwZnU0OS1XMV9FaDlQN1JUcEx5aHJWQ1NlOFZZOFdkYW04TUdyM2UyQS14aUpFQkdxMHRkcm9YbVNoX0JSeGZna0c1aHoxTkkzN21fb0phMjZ6aUFoTE5VdjBrZ1U5Sg?oc=5",
+              "publishedAt": "2025-02-13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "307만 가맹점 카드수수료 인하 대상, 내 업종도 포함됐는지 확인법 있을까요?",
+      "content": "머니투데이 기사에서 307만 가맹점이 낮은 수수료를 적용받는다고 했는데 업종 코드별 확인 페이지가 어디 있는지 알고 싶습니다.",
+      "category": "fees",
+      "author": {
+        "nickname": "neonarch",
+        "businessType": "샐러드 전문점",
+        "region": "대전 둔산",
+        "yearsInBusiness": 3
+      },
+      "metrics": {
+        "viewCount": 90,
+        "commentCount": 3,
+        "scrapCount": 4
+      },
+      "flags": {
+        "needsExpertReply": false,
+        "needsExaminerReply": false
+      },
+      "sources": [
+        {
+          "title": "영세·중소업체 307만곳 카드수수료 인하…얼마나?",
+          "publisher": "머니투데이",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE02cXdkcGNQZWxXUEt4emI2WEFIT2N2OHpmUnlBc042aDFMNFpkTDNaLW9kb3V6MGVIdGdHMzY4Y2ZwVFFIRk5QNmJOVVp5cTNGcEQxMGdIX0hfNU9FcG91RFd3MnZzd9IBbkFVX3lxTE15a0lXWmYxRXJlSjNKQmY3N0VubGRxUWJqZXBnRFRubEMwd0ZWeWtGSmhPYU5lY245b05KVjVkdGhpSlYwWF9ZaFVaeGdBMlU4dzdQcEJVVXMtN05UZGdJcE5oeUxUNlJnV3VYTlZ3?oc=5",
+          "publishedAt": "2025-08-13"
+        }
+      ],
+      "answers": [
+        {
+          "role": "community",
+          "displayName": "amberpulse",
+          "content": "여신금융협회 홈페이지에서 사업자번호로 현재 수수료율을 조회할 수 있어요. 조회 결과를 PDF로 저장해 두면 다음 정산 때 비교하기 쉽습니다."
+        }
+      ]
+    },
+    {
+      "title": "2월 14일 이전 매출은 기존 수수료로 정산되나요?",
+      "content": "수수료 인하 시행 전날 카드 매출이 많은데 정산 주기가 주 2회라 전환 시점이 헷갈립니다. 세무적으로 어떻게 구분하고 계신가요?",
+      "category": "fees",
+      "author": {
+        "nickname": "echoheritage",
+        "businessType": "독립서점",
+        "region": "광주 동구",
+        "yearsInBusiness": 5
+      },
+      "metrics": {
+        "viewCount": 58,
+        "commentCount": 1,
+        "scrapCount": 2
+      },
+      "flags": {
+        "needsExpertReply": false,
+        "needsExaminerReply": false
+      },
+      "sources": [
+        {
+          "title": "내일부터 연매출 30억이하 가맹점 카드수수료율 0.05∼0.1%p인하",
+          "publisher": "연합뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5WallLazBzMFBnWXI0ZS10Nm9jdmY5eFZMV25Kb0ZvTnFILUxfemJoLU9SdlVtMkREVzdkazktYmd0MUp0YVNjLTF0Njgyb25wNGxIRmhhcFEyYXPSAWBBVV95cUxNVTNJdUM5Q1NEVENaejlEOTFWN0hwanpOSzF5ck01MmdNSW5peVZSQW9sdjd4T19EaVF6UkhVMnU4a2trbkFyMHBsdzloRG0wN0I1algwS1lUTmlMN1B6VGs?oc=5",
+          "publishedAt": "2025-02-13"
+        }
+      ],
+      "answers": [
+        {
+          "role": "community",
+          "displayName": "mintsignal",
+          "content": "저는 2월 중 일시적으로 정산 주기를 주1회로 바꿔 시행일 전후 입금이 섞이지 않도록 했습니다. PG사 관리자에서 요청하면 빠르게 처리됐어요."
+        }
+      ]
+    },
+    {
+      "title": "가로수길 공실률 42%라는데 임대료 재협상 해보신 분 계신가요?",
+      "content": "가로수길 공실률이 42%라는 기사 때문에 건물주와 임대료 조정을 논의하려 합니다. 실제로 성공하신 분들의 협상 포인트가 궁금합니다.",
+      "category": "rent",
+      "author": {
+        "nickname": "silverlotus",
+        "businessType": "컨셉 편집숍",
+        "region": "서울 신사",
+        "yearsInBusiness": 8
+      },
+      "metrics": {
+        "viewCount": 220,
+        "commentCount": 9,
+        "scrapCount": 14
+      },
+      "flags": {
+        "needsExpertReply": false,
+        "needsExaminerReply": false
+      },
+      "sources": [
+        {
+          "title": "120m 걷는데 행인 10여명뿐…공실 42% 가로수길 비명",
+          "publisher": "중앙일보",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9maFB1REIxdFhWV3JZS3dXYllwUDI4bnRpQW9TWDVqbDllZ0tCSi1xNkRIYk5XY0xlNE1Sckg3M3FUdUFxazNabmh1SjA3NUhWcms5V3Bn?oc=5",
+          "publishedAt": "2025-06-25"
+        }
+      ],
+      "answers": [
+        {
+          "role": "community",
+          "displayName": "linenorbit",
+          "content": "공실 기사와 유동인구 데이터를 인쇄해서 제시하니 관리비 동결과 임대료 10% 감액에 합의했습니다. 대신 1년 이상 계약 유지 조건을 넣었어요."
+        }
+      ]
+    },
+    {
+      "title": "울산 집합상가 공실률 전국 평균 두 배라는데 계약 갱신 전략 있나요?",
+      "content": "울산 집합상가 공실률이 전국 평균의 두 배라는 기사 때문에 계약 갱신을 앞두고 걱정입니다. 임대료 재협상에 성공한 사례가 있을까요?",
+      "category": "rent",
+      "author": {
+        "nickname": "artictrail",
+        "businessType": "디지털 인쇄소",
+        "region": "울산 남구",
+        "yearsInBusiness": 9
+      },
+      "metrics": {
+        "viewCount": 88,
+        "commentCount": 2,
+        "scrapCount": 3
+      },
+      "flags": {
+        "needsExpertReply": false,
+        "needsExaminerReply": false
+      },
+      "sources": [
+        {
+          "title": "자영업 침체 울산 집합상가 공실률 전국평균 2배",
+          "publisher": "울산일보",
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE0yYjJaam9qN3JfWW81a2JKM24yYzN6OWZzWHNoV1lLLWVtM2NiYjk4V2JhU2kzSTVubzVvamtmY3BTMG43UEp4T25obmhJc0JMazMzZGdXMHo5YWlFSzM2aDdfMkZpQk1EQjYxYQ?oc=5",
+          "publishedAt": "2025-04-28"
+        }
+      ],
+      "answers": [
+        {
+          "role": "community",
+          "displayName": "cloudember",
+          "content": "갱신권을 행사한 뒤 시장 임대료 조사서를 제시해 관리비 일부를 감액했습니다. 지역 부동산에서 공실 리스트를 받아가면 설득이 쉬웠어요."
+        }
+      ]
+    },
+    {
+      "title": "광주 금남로 공실이 절반이라는데 상권 이동 대비 전략이 있을까요?",
+      "content": "광주 금남로 사무실 공실이 절반에 달한다는 기사를 봤습니다. 상권 이동에 대비해 온라인 매출을 보강한 사례나 팁이 궁금합니다.",
+      "category": "rent",
+      "author": {
+        "nickname": "rainbarrel",
+        "businessType": "공유오피스 카페",
+        "region": "광주 동구",
+        "yearsInBusiness": 3
+      },
+      "metrics": {
+        "viewCount": 64,
+        "commentCount": 2,
+        "scrapCount": 2
+      },
+      "flags": {
+        "needsExpertReply": false,
+        "needsExaminerReply": false
+      },
+      "sources": [
+        {
+          "title": "광주 금남로 사무실 절반 공실…상무·첨단지구 상가도 비어",
+          "publisher": "연합뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5iWE42RFdCS3NnWDluOS0ySHNwM24yVnlfcmZ3d0lLX1hlRnhEZFdUcmVLTG11THFqWnlHVS1BMHIyYXZWZEZ0RkRRZjVSM21JNlpqb0JKTDVBMzTSAWBBVV95cUxOeFdlam1QNlhqS0xWeGlDcFNiQ3RCbGdkbFZPcFN1VnM5MHJjLXo2blBPYnk4VHBoblZVTUdnWWYtdTJLNFh6Ymtma3pmTmN2QVRJSndmN01FaVRxdTJsWTc?oc=5",
+          "publishedAt": "2025-08-08"
+        }
+      ],
+      "answers": [
+        {
+          "role": "community",
+          "displayName": "sepiabrook",
+          "content": "월 구독권 대신 시간제 결제를 추가하고 웨비나 스튜디오를 대여하면서 온라인 예약 매출을 올렸습니다. 빈 좌석이 줄어들었어요."
+        }
+      ]
+    },
+    {
+      "title": "온라인 플랫폼 공정화법 소위 심사, 배달앱 수수료에도 영향 있을까요?",
+      "content": "국회에서 플랫폼 공정화법을 7월에 소위 심사한다고 들었습니다. 배달앱 수수료 구조가 즉시 바뀌는지, 준비해야 할 점이 있다면 알려주세요.",
+      "category": "regulation",
+      "author": {
+        "nickname": "clarionbay",
+        "businessType": "피자 배달 전문",
+        "region": "서울 마포",
+        "yearsInBusiness": 6
+      },
+      "metrics": {
+        "viewCount": 119,
+        "commentCount": 3,
+        "scrapCount": 6
+      },
+      "flags": {
+        "needsExpertReply": true,
+        "needsExaminerReply": false
+      },
+      "sources": [
+        {
+          "title": "與, 온라인플랫폼 공정화법 先처리 속도…22일 소위심사",
+          "publisher": "연합뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBNVUc0MTRPbHBrcWtLaGtwUC12UzIxUkY0NkRIQzF5R1M3QlRRRGY2a1BWVy1GczBYVHRuSnFBbTRxVzNBSURiV1FuM1dXMHdvLWpoVlJqMFo2dTDSAWBBVV95cUxPQUhNdDJzdXN2ZE9ha0w4QU42UjduSm9QeEFRNDBJNmhhUWxaSHZyTFhjUG5Hb2lmal8wNmhhV0dwOG8wVzFDRTNZTllSc3p6STBwajk0cmN0VDd0bEx4bWI?oc=5",
+          "publishedAt": "2025-07-17"
+        }
+      ],
+      "answers": [
+        {
+          "role": "expert",
+          "displayName": "윤은정 연구위원",
+          "title": "디지털 공정거래 연구위원",
+          "organization": "디지털공정거래포럼",
+          "content": "법안 초안은 수수료 상한을 바로 정하지 않지만 계약서에 수수료 산정 근거를 명시하도록 의무화합니다. 가맹점주는 수수료 변경 시 15일 전 통지받을 권리가 생기니 계약서를 점검해 두세요.",
+          "isPinned": true,
+          "sources": [
+            {
+              "title": "국회 정무위 법안심사 자료",
+              "publisher": "국회 정무위원회",
+              "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBNVUc0MTRPbHBrcWtLaGtwUC12UzIxUkY0NkRIQzF5R1M3QlRRRGY2a1BWVy1GczBYVHRuSnFBbTRxVzNBSURiV1FuM1dXMHdvLWpoVlJqMFo2dTDSAWBBVV95cUxPQUhNdDJzdXN2ZE9ha0w4QU42UjduSm9QeEFRNDBJNmhhUWxaSHZyTFhjUG5Hb2lmal8wNmhhV0dwOG8wVzFDRTNZTllSc3p6STBwajk0cmN0VDd0bEx4bWI?oc=5",
+              "publishedAt": "2025-07-17"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "일회용품 규제 완화 이후 친환경 대체제 유지하신 분 계신가요?",
+      "content": "정부 규제 완화로 매장 내 일회용품 사용이 늘었다는 기사 이후 손님 반응이 갈립니다. 친환경 대체제를 유지하는 전략이 있으면 공유 부탁드립니다.",
+      "category": "environment",
+      "author": {
+        "nickname": "olivegrid",
+        "businessType": "샐러드바",
+        "region": "수원 영통",
+        "yearsInBusiness": 4
+      },
+      "metrics": {
+        "viewCount": 72,
+        "commentCount": 2,
+        "scrapCount": 3
+      },
+      "flags": {
+        "needsExpertReply": false,
+        "needsExaminerReply": false
+      },
+      "sources": [
+        {
+          "title": "정부 규제 완화 이후 일회용품 사용 다시 증가",
+          "publisher": "세계일보",
+          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE10b19HN2RFdmpSLVdlZzdYdXlXYVRvUWdUbDZIWnRWSjNHWjAwSmtHU29SbDFuMmhpcWplR080N2FDRXE5OUdYT2xZYm5BNHZBaTdHdVNCWlTSAVRBVV95cUxNdUR2YUd0bU9hc2Q2a3dpRF9qRGtONzN4RmtpYkRxdXZXd0pLdTFrVFRZV1N4Z2VKM1hUaE9pQkw1dEhHWTNrWF84WEl3aVZ1TV9xdzE?oc=5",
+          "publishedAt": "2025-09-15"
+        }
+      ],
+      "answers": [
+        {
+          "role": "community",
+          "displayName": "emberpulse",
+          "content": "다회용기 할인 500원을 유지했더니 포장 손님 30%가 재사용 용기를 가져옵니다. 비용은 들지만 충성 고객이 늘었습니다."
+        }
+      ]
+    },
+    {
+      "title": "9월 귀속 국세 신고기한이 15일로 연장된다는데 홈택스 일정도 바뀌나요?",
+      "content": "국세청에서 9월 귀속 부가세 신고 기한을 10일에서 15일로 바꾼다고 합니다. 홈택스 자동 신고 알림 일정도 조정되는지 궁금합니다.",
+      "category": "tax",
+      "author": {
+        "nickname": "sagevector",
+        "businessType": "전통시장 잡화점",
+        "region": "전주 완산",
+        "yearsInBusiness": 11
+      },
+      "metrics": {
+        "viewCount": 55,
+        "commentCount": 1,
+        "scrapCount": 2
+      },
+      "flags": {
+        "needsExpertReply": false,
+        "needsExaminerReply": false
+      },
+      "sources": [
+        {
+          "title": "국세청, 내달 9월 귀속 국세 신고･납부일…10→15일로 기한변경",
+          "publisher": "조세금융신문",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBrRmFzTFE1R2pvSmZ1TDJZbEpGbU5oM0lTRWZHSlB4cUQxNHc0bGRWaHprck8zQmJpbTh0OEM2RUZjdDc3QUVubVlEZ2FWemgyUUZJQ1RtcE5FWEZNNGl6aWg2bw?oc=5",
+          "publishedAt": "2025-09-08"
+        }
+      ],
+      "answers": [
+        {
+          "role": "community",
+          "displayName": "northamber",
+          "content": "홈택스 자동신고 알림이 D-5일부터 뜨도록 조정됐습니다. 일정이 늘어났으니 미리 장부 정리하고 제출하면 여유가 있더라고요."
+        }
+      ]
+    }
+  ]
+}

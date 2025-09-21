@@ -1,0 +1,109 @@
+.certified-examiners__cta,
+.business-voice__cta,
+.consultation-request__cta {
+  margin-top: 4rem;
+}
+
+.certified-examiners__cta-banner,
+.business-voice__cta-banner,
+.consultation-request__cta-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 1.75rem;
+  background: linear-gradient(90deg, #2563eb 0%, #3b82f6 50%, #10b981 100%);
+  color: #ffffff;
+  box-shadow: 0 32px 64px rgba(15, 23, 42, 0.25);
+}
+
+.certified-examiners__cta-content,
+.business-voice__cta-content,
+.consultation-request__cta-content {
+  max-width: 640px;
+}
+
+.certified-examiners__cta-eyebrow,
+.business-voice__cta-eyebrow,
+.consultation-request__cta-eyebrow {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(219, 234, 254, 0.85);
+}
+
+.certified-examiners__cta-title,
+.business-voice__cta-title,
+.consultation-request__cta-title {
+  margin: 0.5rem 0 0;
+  font-size: clamp(1.75rem, 1.6rem + 0.6vw, 2.125rem);
+  font-weight: 700;
+  line-height: 1.3;
+  white-space: pre-line;
+}
+
+.certified-examiners__cta-subtitle,
+.business-voice__cta-subtitle,
+.consultation-request__cta-subtitle {
+  margin: 0.75rem 0 0;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: rgba(219, 234, 254, 0.85);
+  white-space: pre-line;
+}
+
+.certified-examiners__cta-button,
+.business-voice__cta-button,
+.consultation-request__cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.75rem;
+  border-radius: 9999px;
+  background: #ffffff;
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.certified-examiners__cta-button:hover,
+.certified-examiners__cta-button:focus-visible,
+.consultation-request__cta-button:hover,
+.consultation-request__cta-button:focus-visible {
+  background: #e0edff;
+  color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.certified-examiners__cta-button:focus-visible,
+.consultation-request__cta-button:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.4);
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .certified-examiners__cta-banner,
+.business-voice__cta-banner,
+.consultation-request__cta-banner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .certified-examiners__cta-content,
+.business-voice__cta-content,
+.consultation-request__cta-content {
+    max-width: 520px;
+  }
+}
+
+.certified-examiners__cta-section,
+.consultation-request__cta-section {
+  padding: clamp(60px, 8vw, 100px) 0;
+}
+

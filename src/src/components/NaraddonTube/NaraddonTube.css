@@ -1,0 +1,524 @@
+.video-item:hover .video-thumbnail {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+} /* 호버 영역 확장을 위한 가상 요소 */
+.youtube-card.expanded::after {
+  content: '';
+  position: absolute;
+  bottom: -50px; /* 카드 아래로 호버 영역 확장 */
+  left: -20px;
+  right: -20px;
+  height: 100px;
+  pointer-events: none;
+  z-index: 98;
+}
+/* 나라똔튜브 섹션 - 플로팅 카드 디자인 */
+.naraddon-tube-section {
+  padding: 40px 0;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.naraddon-tube-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 24px;
+  /* 깊이감 있는 그림자 복원 */
+  box-shadow:
+    0 1px 3px 0 rgba(0, 0, 0, 0.04),
+    0 1px 2px 0 rgba(0, 0, 0, 0.06),
+    0 4px 8px -2px rgba(0, 0, 0, 0.03),
+    0 20px 25px -5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+/* 섹션 헤더 - 공백 최소화 */
+.section-header {
+  text-align: center;
+  margin-bottom: 8px; /* 공백 더 줄임 */
+}
+
+.section-title {
+  font-size: 36px; /* 함께하는 정부기관과 동일한 크기 */
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+  line-height: 1;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+/* 타이틀 아래 녹색 포인트 선 추가 */
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #4caf50, #45a049);
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  font-size: 16px; /* 함께하는 정부기관과 동일 */
+  color: #666666;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* YouTube 스타일 그리드 레이아웃 - 가로 4개 배열 */
+.youtube-style-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 30px;
+}
+
+/* YouTube 카드 스타일 - border 제거 */
+.youtube-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: visible;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 10px;
+  /* border 제거 */
+  box-shadow:
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    0 4px 6px -1px rgba(0, 0, 0, 0.08),
+    0 8px 10px -5px rgba(0, 0, 0, 0.1);
+}
+
+.youtube-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 10px 25px -5px rgba(0, 0, 0, 0.15),
+    0 20px 40px -15px rgba(76, 175, 80, 0.2);
+  /* border 제거 */
+}
+
+.youtube-card.expanded {
+  z-index: 100;
+  transform: scale(1);
+  padding-bottom: 0; /* 확장 시 패딩 제거 */
+}
+
+/* 썸네일 섹션 */
+.thumbnail-section {
+  position: relative;
+  width: 100%;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); /* 더 부드러운 가감속 */
+  transform-origin: center center;
+}
+
+.youtube-card.expanded .thumbnail-section {
+  transform: scale(1.8) translateY(-35px); /* 1.8배 확대로 증가 */
+  z-index: 101;
+  margin-bottom: 90px; /* 확대 시 여백 추가 */
+  pointer-events: auto;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.thumbnail-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 75%; /* 4:3 비율 유지 */
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+  background: #f5f5f5;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.youtube-card.expanded .thumbnail-wrapper {
+  border-radius: 16px;
+  /* 네온 글로우 제거 */
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.3),
+    0 20px 60px rgba(0, 0, 0, 0.2);
+  animation: none;
+}
+
+.thumbnail-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* cover에서 contain으로 변경 - 원본 비율 유지 */
+  background: #fafafa;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.youtube-card:hover .thumbnail-image {
+  transform: scale(1.01); /* 더 미묘한 확대 */
+}
+
+/* 썸네일 정보 */
+.thumbnail-info {
+  padding: 12px 16px;
+  background: #ffffff;
+  border-radius: 0 0 16px 16px;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.youtube-card.expanded .thumbnail-info {
+  background: transparent;
+  position: absolute;
+  bottom: -45px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 8px 16px;
+}
+
+.thumbnail-title {
+  color: #333333;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.youtube-card.expanded .thumbnail-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333 !important; /* 검정색으로 변경 */
+  text-shadow: none;
+}
+
+.video-count {
+  color: #666666;
+  font-size: 13px;
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+
+.youtube-card.expanded .video-count {
+  color: #666 !important; /* 회색으로 변경 */
+  font-size: 14px;
+  text-shadow: none;
+}
+
+/* 확장된 영상 목록 */
+.expanded-videos {
+  padding: 80px 20px 30px;
+  background: transparent; /* 그라디언트 제거 */
+  border-radius: 0 0 16px 16px;
+  animation: slideDown 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  margin-top: -40px;
+  position: relative;
+  z-index: 99;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px); /* 더 짧은 거리에서 시작 */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.video-item {
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  z-index: 100; /* z-index 추가로 클릭 가능하게 */
+}
+
+.video-item:hover {
+  transform: scale(1.03); /* 더 미묘한 확대 */
+  z-index: 101; /* 호버시 z-index 증가 */
+}
+
+.video-thumbnail {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 비율 */
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  pointer-events: auto;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.video-item:hover .video-thumbnail {
+  box-shadow:
+    0 6px 12px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(0, 255, 255, 0.2),
+    0 0 40px rgba(0, 255, 255, 0.1);
+}
+
+.video-thumb-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1; /* 이미지를 가장 아래로 */
+}
+
+/* 비디오 호버 오버레이 */
+.video-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85); /* 더 진하게 조정 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  backdrop-filter: blur(2px);
+  z-index: 20; /* 더 높은 z-index */
+  pointer-events: none; /* 초기에는 포인터 이벤트 비활성화 */
+}
+
+.video-item:hover .video-hover-overlay {
+  opacity: 1;
+  pointer-events: auto; /* 호버시 포인터 이벤트 활성화 */
+}
+
+.play-icon-small {
+  width: 48px; /* 크기 증가 */
+  height: 48px; /* 크기 증가 */
+  color: #ffffff !important; /* 강제로 흰색 적용 */
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 25px rgba(0, 255, 255, 0.9));
+  z-index: 21; /* 더 높은 z-index */
+  fill: #ffffff !important; /* SVG fill 속성도 흰색으로 */
+}
+
+.play-icon-small svg {
+  fill: #ffffff !important;
+  color: #ffffff !important;
+  width: 100%;
+  height: 100%;
+}
+
+.watch-now {
+  color: #ffffff !important; /* 강제로 흰색 적용 */
+  font-size: 14px; /* 크기 증가 */
+  font-weight: 700; /* 더 굵게 */
+  text-transform: none; /* 대문자 변환 제거 */
+  letter-spacing: 0.3px;
+  z-index: 21; /* 더 높은 z-index */
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.9),
+    0 0 8px rgba(0, 255, 255, 0.5); /* 네온 효과 추가 */
+  display: block; /* 블록 요소로 설정 */
+  margin-top: 6px;
+  position: relative; /* 상대 위치 */
+}
+
+.video-title {
+  color: #ffffff !important; /* 강제로 흰색 적용 */
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 8px;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  position: relative; /* 상대 위치 추가 */
+  z-index: 5; /* z-index 추가 */
+}
+
+/* 비디오 모달 */
+.video-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
+}
+
+.video-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1200px;
+  z-index: 10000;
+  animation: scaleIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 1;
+}
+
+.close-button:hover {
+  background: rgba(0, 255, 255, 0.2);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.close-button svg {
+  width: 24px;
+  height: 24px;
+  color: #fff;
+}
+
+.video-player-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 비율 */
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.8),
+    0 0 40px rgba(0, 255, 255, 0.2);
+}
+
+.youtube-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1200px) {
+  .youtube-style-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .youtube-card.expanded .thumbnail-section {
+    transform: scale(1.5) translateY(-25px); /* 반응형에서도 충분히 크게 */
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+}
+
+@media (max-width: 900px) {
+  .youtube-style-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+  }
+
+  .youtube-card.expanded .thumbnail-section {
+    transform: scale(1.4) translateY(-20px); /* 태블릿에서도 크게 */
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+}
+
+@media (max-width: 600px) {
+  .youtube-style-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .video-modal {
+    width: 95%;
+  }
+
+  .videos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .youtube-card.expanded .thumbnail-section {
+    transform: scale(1.3) translateY(-15px); /* 모바일에서도 적절히 크게 */
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+}
+
+/* 스크롤바 스타일링 (YouTube 스타일) */
+.expanded-videos::-webkit-scrollbar {
+  width: 8px;
+}
+
+.expanded-videos::-webkit-scrollbar-track {
+  background: #181818;
+}
+
+.expanded-videos::-webkit-scrollbar-thumb {
+  background: #606060;
+  border-radius: 4px;
+}
+
+.expanded-videos::-webkit-scrollbar-thumb:hover {
+  background: #909090;
+}
+
+/* 네온 효과 제거 - 화이트 배경에 맞게 */

@@ -1,0 +1,94 @@
+import { NextRequest, NextResponse } from "next/server";
+import connectDB from '@/lib/mongodb';
+import User from '@/models/User';
+import jwt from 'jsonwebtoken';
+import Joi from 'joi';
+
+const loginSchema = Joi.object({
+  email: Joi.string().email().required(),
+  password: Joi.string().required()
+});
+
+export async function POST(request: NextRequest) {
+  try {
+    const body = await request.json();
+    
+    const { error } = loginSchema.validate(body);
+    if (error) {
+      return NextResponse.json(
+        { error: error.details[0].message },
+        { status: 400 }
+      );
+    }
+    
+    try {
+      await connectDB();
+    } catch (dbError) {
+      console.error('Database connection failed:', dbError);
+      return NextResponse.json(
+        { error: 'Database connection failed. Please try again later.' },
+        { status: 503 }
+      );
+    }
+    
+    const user = await User.findOne({ email: body.email });
+    if (!user) {
+      return NextResponse.json(
+        { error: '이메일 또는 비밀번호가 올바르지 않습니다.' },
+        { status: 401 }
+      );
+    }
+    
+    const isValidPassword = await user.comparePassword(body.password);
+    if (!isValidPassword) {
+      return NextResponse.json(
+        { error: '이메일 또는 비밀번호가 올바르지 않습니다.' },
+        { status: 401 }
+      );
+    }
+    
+    if (!user.isActive) {
+      return NextResponse.json(
+        { error: '비활성화된 계정입니다. 관리자에게 문의하세요.' },
+        { status: 403 }
+      );
+    }
+    
+    user.lastLogin = new Date();
+    await user.save();
+    
+    const token = jwt.sign(
+      {
+        userId: user._id,
+        email: user.email,
+        role: user.role
+      },
+      process.env.JWT_SECRET || 'default-secret-key-change-in-production',
+      { expiresIn: '7d' }
+    );
+    
+    const userResponse = user.toPublicJSON();
+    
+    const response = NextResponse.json({
+      message: '로그인 성공',
+      user: userResponse,
+      token
+    });
+    
+    response.cookies.set('token', token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'lax',
+      maxAge: 60 * 60 * 24 * 7 // 7 days
+    });
+    
+    return response;
+    
+  } catch (error) {
+    console.error('Login error:', error);
+    return NextResponse.json(
+      { error: '서버 오류가 발생했습니다.' },
+      { status: 500 }
+    );
+  }
+}

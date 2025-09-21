@@ -1,0 +1,293 @@
+/* ====================================
+   플로팅 카드 시스템 - 전체 페이지 스타일
+   ==================================== */
+
+/* 1. 전체 페이지 배경 - 아주 연한 회색 */
+body {
+  background: #fafbfc !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. 메인 콘텐츠 영역 */
+.home-main-content {
+  background: #fafbfc !important;
+  position: relative;
+}
+
+/* 3. 각 섹션 기본 스타일 - 투명 배경, 적절한 패딩 */
+.home-trust-section,
+.policy-thumbnails-section,
+.naraddon-tube-section,
+.home-save-section {
+  padding: 40px 0 !important; /* 80px → 40px로 축소 */
+  background: transparent !important;
+  position: relative;
+  overflow: visible;
+  /* 기존 border 제거 */
+  border: none !important;
+  border-bottom: none !important;
+  border-top: none !important;
+}
+
+/* 섹션 간격 조정 */
+.home-trust-section {
+  padding-top: 30px !important; /* 60px → 30px */
+}
+
+.policy-thumbnails-section {
+  padding-top: 20px !important; /* 40px → 20px */
+  margin-top: 0 !important;
+}
+
+/* 4. 컨테이너 - 플로팅 카드 효과 */
+.home-trust-section .container,
+.policy-thumbnails-section .container,
+.naraddon-tube-section .naraddon-tube-container,
+.home-save-section .container {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px 30px; /* 60px 40px → 40px 30px */
+  margin: 0 auto;
+
+  /* 다층 그림자로 깊이감 표현 */
+  box-shadow:
+    0 1px 2px 0 rgba(0, 0, 0, 0.03),
+    0 4px 8px 0 rgba(0, 0, 0, 0.04),
+    0 12px 24px 0 rgba(0, 0, 0, 0.05);
+
+  /* 부드러운 전환 효과 */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* border 대신 그림자로만 구분 */
+  border: none !important;
+}
+
+/* 5. 특별 섹션 차별화 */
+
+/* TrustSection - 브랜드 컬러 반영 */
+.home-trust-section .container {
+  box-shadow:
+    0 2px 4px 0 rgba(76, 175, 80, 0.05),
+    0 8px 16px 0 rgba(0, 0, 0, 0.04),
+    0 16px 32px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* NaraddonTube - 더 깊은 그림자 */
+.naraddon-tube-section {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(250, 251, 252, 0.5) 50%,
+    transparent 100%
+  ) !important;
+  padding: 50px 0 !important; /* 100px → 50px */
+}
+
+.naraddon-tube-section .naraddon-tube-container {
+  box-shadow:
+    0 2px 4px 0 rgba(0, 0, 0, 0.03),
+    0 12px 24px 0 rgba(0, 0, 0, 0.05),
+    0 24px 48px 0 rgba(0, 0, 0, 0.07);
+}
+
+/* SaveSection - 살짝 들어간 느낌 */
+.home-save-section .container {
+  box-shadow:
+    inset 0 1px 3px 0 rgba(0, 0, 0, 0.02),
+    0 2px 8px 0 rgba(0, 0, 0, 0.03),
+    0 8px 16px 0 rgba(0, 0, 0, 0.04);
+}
+
+/* 6. 호버 인터랙션 효과 */
+.home-trust-section .container:hover,
+.policy-thumbnails-section .container:hover,
+.naraddon-tube-section .naraddon-tube-container:hover,
+.home-save-section .container:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.04),
+    0 12px 24px 0 rgba(0, 0, 0, 0.06),
+    0 24px 48px 0 rgba(0, 0, 0, 0.08);
+}
+
+/* 7. 가로 레이아웃 변형에도 적용 */
+.home-trust-section.horizontal,
+.home-save-section.horizontal {
+  background: transparent !important;
+  border: none !important;
+}
+
+.home-trust-section.horizontal .container,
+.home-save-section.horizontal .container {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 50px 40px;
+}
+
+/* 8. 내부 요소들 조정 */
+
+/* PolicyThumbnails 내부 그리드 조정 */
+.thumbnails-grid {
+  background: transparent !important;
+}
+
+.thumbnail-item {
+  background: transparent !important;
+}
+
+/* NaraddonTube 카드들 조정 */
+.youtube-card {
+  background: #ffffff !important;
+  border: none !important;
+  box-shadow:
+    0 2px 6px 0 rgba(0, 0, 0, 0.06),
+    0 4px 12px 0 rgba(0, 0, 0, 0.08) !important;
+}
+
+.youtube-card:hover {
+  box-shadow:
+    0 4px 12px 0 rgba(0, 0, 0, 0.08),
+    0 8px 24px 0 rgba(0, 0, 0, 0.12) !important;
+}
+
+/* 9. 섹션 타이틀 아래 구분선 제거 */
+.section-header::after,
+.section-title::after {
+  display: none !important;
+}
+
+/* 10. 컨텐츠 내부 카드/박스 스타일 통일 */
+.feature-item,
+.save-item-horizontal,
+.guarantee-item,
+.save-detail-horizontal {
+  background: #fafafa !important;
+  border: none !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06) !important;
+}
+
+.feature-item:hover,
+.save-item-horizontal:hover,
+.guarantee-item:hover,
+.save-detail-horizontal:hover {
+  background: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 11. EmpathySection은 그대로 유지 */
+.empathy-section {
+  /* 기존 보라색 스타일 유지 */
+}
+
+/* 12. 정부기관 로고 섹션 조정 */
+.home-government-logos {
+  background: #f8f9fa !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  padding: 80px 0;
+}
+
+.home-government-logos .home-government-logos__wrapper {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  padding: 40px 0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* 13. Footer는 기존 스타일 유지 */
+.footer-wrapper {
+  /* 기존 어두운 배경 유지 */
+}
+
+/* 14. 반응형 디자인 */
+@media (max-width: 1400px) {
+  .home-trust-section .container,
+  .policy-thumbnails-section .container,
+  .naraddon-tube-section .naraddon-tube-container,
+  .home-save-section .container {
+    margin: 0 20px;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* 모바일에서 섹션 패딩 줄이기 */
+  .home-trust-section,
+  .policy-thumbnails-section,
+  .naraddon-tube-section,
+  .home-save-section {
+    padding: 30px 0 !important; /* 60px → 30px */
+  }
+
+  /* 모바일에서 컨테이너 패딩 줄이기 */
+  .home-trust-section .container,
+  .policy-thumbnails-section .container,
+  .naraddon-tube-section .naraddon-tube-container,
+  .home-save-section .container {
+    padding: 40px 20px;
+    border-radius: 16px;
+    margin: 0 15px;
+  }
+
+  /* 모바일에서 호버 효과 제거 */
+  .home-trust-section .container:hover,
+  .policy-thumbnails-section .container:hover,
+  .naraddon-tube-section .naraddon-tube-container:hover,
+  .home-save-section .container:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-trust-section,
+  .policy-thumbnails-section,
+  .naraddon-tube-section,
+  .home-save-section {
+    padding: 20px 0 !important; /* 40px → 20px */
+  }
+
+  .home-trust-section .container,
+  .policy-thumbnails-section .container,
+  .naraddon-tube-section .naraddon-tube-container,
+  .home-save-section .container {
+    padding: 30px 15px;
+    border-radius: 12px;
+    margin: 0 10px;
+  }
+}
+
+/* 15. 부드러운 스크롤 애니메이션 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-trust-section .container,
+.policy-thumbnails-section .container,
+.naraddon-tube-section .naraddon-tube-container,
+.home-save-section .container {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* 16. 섹션 간 전환 효과 (선택적) */
+.section-transition {
+  height: 40px;
+  background: linear-gradient(
+    180deg,
+    rgba(250, 251, 252, 0) 0%,
+    rgba(250, 251, 252, 0.5) 50%,
+    rgba(250, 251, 252, 0) 100%
+  );
+  margin: -20px 0;
+  position: relative;
+  z-index: 1;
+}
+
+

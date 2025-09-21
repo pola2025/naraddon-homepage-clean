@@ -1,0 +1,606 @@
+/* PolicyComparisonFull.css - PolicyComparison.css의 전체 복사본 */
+
+/* 정책자금 비교 섹션 스타일 */
+.policy-comparison-full-section {
+  padding: 40px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.policy-comparison-full-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(76, 175, 80, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.policy-comparison-full-section .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* 나라똔 보증 강조 */
+.policy-comparison-full-section .guarantee-highlight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(90deg, #4caf50 0%, #45a049 100%);
+  color: white;
+  padding: 15px 0;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(76, 175, 80, 0.2);
+}
+
+.policy-comparison-full-section .guarantee-highlight i {
+  font-size: 20px;
+}
+
+/* 섹션 헤더 */
+.policy-comparison-full-section .section-header {
+  text-align: center;
+  margin-bottom: 30px;
+  animation: fadeInUp 0.8s ease;
+}
+
+.policy-comparison-full-section .main-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.policy-comparison-full-section .sub-title {
+  font-size: 20px;
+  color: #4caf50;
+  font-weight: 600;
+}
+
+/* 비교 테이블 컨테이너 */
+.policy-comparison-full-section .comparison-container {
+  margin-bottom: 40px;
+  animation: fadeInUp 0.8s ease 0.2s;
+  animation-fill-mode: both;
+}
+
+.policy-comparison-full-section .comparison-table {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* 테이블 헤더 */
+.policy-comparison-full-section .table-header {
+  display: grid;
+  grid-template-columns: 120px 1fr 1fr;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+}
+
+.policy-comparison-full-section .header-cell {
+  padding: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.policy-comparison-full-section .header-cell:last-child {
+  border-right: none;
+}
+
+.policy-comparison-full-section .header-cell.category {
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+}
+
+.policy-comparison-full-section .header-cell.bank {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.policy-comparison-full-section .header-cell.policy {
+  font-size: 18px;
+  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+  position: relative;
+}
+
+.policy-comparison-full-section .header-cell i {
+  font-size: 20px;
+}
+
+.policy-comparison-full-section .recommend-badge {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: #ffd700;
+  color: #333;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 2px 10px rgba(255, 215, 0, 0.5);
+  animation: pulse 2s infinite;
+}
+
+/* 테이블 바디 */
+.policy-comparison-full-section .table-body {
+  background: white;
+}
+
+.policy-comparison-full-section .comparison-row {
+  display: grid;
+  grid-template-columns: 120px 1fr 1fr;
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.policy-comparison-full-section .comparison-row:hover {
+  background: #f8f9fa;
+  transform: translateX(5px);
+}
+
+.policy-comparison-full-section .comparison-row:last-child {
+  border-bottom: none;
+}
+
+.policy-comparison-full-section .row-title {
+  padding: 25px 15px;
+  background: #f8f9fa;
+  font-weight: 700;
+  font-size: 16px;
+  color: #495057;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-right: 1px solid #e9ecef;
+}
+
+.policy-comparison-full-section .bank-cell,
+.policy-comparison-full-section .policy-cell {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-right: 1px solid #f0f0f0;
+}
+
+.policy-comparison-full-section .policy-cell {
+  border-right: none;
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.03) 0%, rgba(76, 175, 80, 0.05) 100%);
+  animation: subtleGlow 3s ease-in-out infinite;
+}
+
+@keyframes subtleGlow {
+  0%,
+  100% {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.03) 0%, rgba(76, 175, 80, 0.05) 100%);
+  }
+  50% {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.05) 0%, rgba(76, 175, 80, 0.08) 100%);
+  }
+}
+
+.policy-comparison-full-section .bank-cell {
+  opacity: 0.7;
+  background: linear-gradient(135deg, rgba(220, 220, 220, 0.1) 0%, rgba(220, 220, 220, 0.05) 100%);
+}
+
+.policy-comparison-full-section .icon-negative {
+  color: #dc3545;
+}
+
+.policy-comparison-full-section .icon-positive {
+  color: #4caf50;
+}
+
+.policy-comparison-full-section .cell-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+  max-width: 350px;
+  flex: 1;
+}
+
+.policy-comparison-full-section .cell-content strong {
+  font-size: 20px;
+  color: #2c3e50;
+  line-height: 1.3;
+  font-weight: 700;
+  text-align: left;
+  display: block;
+  white-space: nowrap;
+}
+
+.policy-comparison-full-section .cell-content small {
+  font-size: 16px;
+  color: #6c757d;
+  font-weight: 500;
+  text-align: left;
+  display: block;
+  white-space: nowrap;
+}
+
+/* 플랫폼 보증 배지 */
+.policy-comparison-full-section .platform-guarantee {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(76, 175, 80, 0.05);
+  border-radius: 15px;
+  border: 2px solid rgba(76, 175, 80, 0.2);
+}
+
+.policy-comparison-full-section .platform-guarantee .guarantee-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background: white;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.policy-comparison-full-section .platform-guarantee .guarantee-badge i {
+  color: #4caf50;
+  font-size: 24px;
+}
+
+.policy-comparison-full-section .platform-guarantee .guarantee-badge span {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.policy-comparison-full-section .platform-guarantee .guarantee-text {
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+}
+
+/* 인사이트 섹션 - 새로운 디자인 */
+.policy-comparison-full-section .insights-section {
+  margin: 40px 0;
+  padding: 40px 30px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  animation: fadeInUp 0.8s ease 0.4s;
+  animation-fill-mode: both;
+}
+
+.policy-comparison-full-section .insights-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.policy-comparison-full-section .insights-header h3 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #2c3e50;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+}
+
+.policy-comparison-full-section .insights-header .certified-icon {
+  margin-right: 10px;
+}
+
+.policy-comparison-full-section .insights-header .guarantee-sub {
+  font-size: 18px;
+  color: #4caf50;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.policy-comparison-full-section .insights-header h3::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #4caf50, #45a049);
+  border-radius: 2px;
+}
+
+/* 숫자 카드들 */
+.policy-comparison-full-section .insights-numbers {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.policy-comparison-full-section .number-card {
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+  padding: 30px 20px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.policy-comparison-full-section .number-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.policy-comparison-full-section .number-card.primary {
+  border-top: 4px solid #4caf50;
+}
+
+.policy-comparison-full-section .number-card.secondary {
+  border-top: 4px solid #3b82f6;
+}
+
+.policy-comparison-full-section .number-card.alert {
+  border-top: 4px solid #f59e0b;
+}
+
+.policy-comparison-full-section .number-value {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.policy-comparison-full-section .currency {
+  font-size: 24px;
+  font-weight: 600;
+  color: #666;
+}
+
+.policy-comparison-full-section .amount {
+  font-size: 48px;
+  font-weight: 900;
+  color: #2c3e50;
+  line-height: 1;
+  animation: countUp 2s ease-out;
+}
+
+@keyframes countUp {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.policy-comparison-full-section .unit {
+  font-size: 20px;
+  font-weight: 600;
+  color: #666;
+}
+
+.policy-comparison-full-section .number-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  opacity: 0.08;
+  z-index: 1;
+}
+
+.policy-comparison-full-section .number-label {
+  font-size: 20px;
+  font-weight: 700;
+  color: #495057;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 2;
+}
+
+/* 인사이트 푸터 */
+.policy-comparison-full-section .insights-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding-top: 30px;
+  border-top: 2px solid #e9ecef;
+}
+
+.policy-comparison-full-section .insight-point {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 30px;
+  color: #495057;
+  font-weight: 600;
+}
+
+.policy-comparison-full-section .insight-point i {
+  color: #4caf50;
+  font-size: 30px;
+}
+
+.policy-comparison-full-section .insight-point .vs-left {
+  color: #dc3545;
+  font-weight: 700;
+}
+
+.policy-comparison-full-section .insight-point .vs-center {
+  color: #666;
+  font-weight: 900;
+  margin: 0 10px;
+}
+
+.policy-comparison-full-section .insight-point .vs-right {
+  color: #4caf50;
+  font-weight: 700;
+}
+
+/* CTA 버튼 */
+.policy-comparison-full-section .comparison-cta {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+  animation: fadeInUp 0.8s ease 0.6s;
+  animation-fill-mode: both;
+}
+
+.policy-comparison-full-section .cta-button {
+  padding: 18px 40px;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.policy-comparison-full-section .cta-button.primary {
+  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+  color: white;
+  box-shadow: 0 5px 20px rgba(76, 175, 80, 0.3);
+}
+
+.policy-comparison-full-section .cta-button.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(76, 175, 80, 0.4);
+}
+
+.policy-comparison-full-section .cta-button.secondary {
+  background: white;
+  color: #4caf50;
+  border: 2px solid #4caf50;
+}
+
+.policy-comparison-full-section .cta-button.secondary:hover {
+  background: #4caf50;
+  color: white;
+}
+
+.policy-comparison-full-section .cta-button i {
+  font-size: 20px;
+}
+
+/* 애니메이션 */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* 반응형 */
+@media (max-width: 1200px) {
+  .policy-comparison-full-section .cell-content strong {
+    font-size: 18px;
+  }
+
+  .policy-comparison-full-section .cell-content small {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .policy-comparison-full-section .table-header,
+  .policy-comparison-full-section .comparison-row {
+    grid-template-columns: 1fr;
+  }
+
+  .policy-comparison-full-section .header-cell.category,
+  .policy-comparison-full-section .row-title {
+    display: none;
+  }
+
+  .policy-comparison-full-section .bank-cell,
+  .policy-comparison-full-section .policy-cell {
+    padding: 20px;
+    border-bottom: 1px solid #e9ecef;
+  }
+
+  .policy-comparison-full-section .bank-cell::before {
+    content: '일반 은행 대출';
+    display: block;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #dc3545;
+  }
+
+  .policy-comparison-full-section .policy-cell::before {
+    content: '정부 정책 자금';
+    display: block;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #4caf50;
+  }
+
+  .policy-comparison-full-section .insights-numbers {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .policy-comparison-full-section .number-card {
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .policy-comparison-full-section .comparison-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .policy-comparison-full-section .cta-button {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+}

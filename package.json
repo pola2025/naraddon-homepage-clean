@@ -1,0 +1,83 @@
+{
+  "name": "naraddon-nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "migrate:ttontok-categories:fallback": "ts-node --transpile-only --compiler-options {\"module\":\"commonjs\"} scripts/migrate-ttontok-categories.ts --apply --fallback-etc",
+    "backup:list": "node scripts/backup.js list",
+    "backup:consult-sections": "node scripts/backup-consultation-sections.js",
+    "deploy": "npm run backup:full && vercel --prod",
+    "commit:history": "node scripts/commit-tracker.js history",
+    "backup:component": "node scripts/backup.js component",
+    "backup": "node scripts/backup.js",
+    "dev:8080": "next dev -p 8080",
+    "migrate:ttontok-categories:apply": "ts-node --transpile-only --compiler-options {\"module\":\"commonjs\"} scripts/migrate-ttontok-categories.ts --apply",
+    "backup:status": "node scripts/backup.js status",
+    "seed:experts": "node scripts/seed-expert-examiners.js",
+    "preflight": "powershell -ExecutionPolicy Bypass -File tools/preflight.ps1",
+    "backup:full": "node scripts/backup.js full",
+    "backup:milestone": "node scripts/backup.js milestone",
+    "seed:ttontok": "ts-node --transpile-only scripts/seed-ttontok.ts",
+    "dev:3002": "next dev -p 3002",
+    "dev": "next dev",
+    "lint": "next lint",
+    "release": "npm run backup:full && npm run preflight && vercel deploy --prod",
+    "start": "next start",
+    "deploy:all": "npm run backup:full && npm run preflight && vercel --prod",
+    "dev:3001": "powershell -ExecutionPolicy Bypass -File scripts/kill-port.ps1 3001 && next dev -p 3001",
+    "commit:restore": "node scripts/commit-tracker.js restore",
+    "migrate:ttontok-categories": "ts-node --transpile-only --compiler-options {\"module\":\"commonjs\"} scripts/migrate-ttontok-categories.ts",
+    "commit:stats": "node scripts/commit-tracker.js stats",
+    "commit:cleanup": "node scripts/commit-tracker.js cleanup",
+    "build": "next build"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.893.0",
+    "@aws-sdk/s3-request-presigner": "^3.892.0",
+    "@notionhq/client": "^5.1.0",
+    "@types/bcrypt": "^6.0.0",
+    "@types/uuid": "^10.0.0",
+    "bcrypt": "^6.0.0",
+    "clsx": "^2.1.0",
+    "dotenv": "^17.2.2",
+    "framer-motion": "^11.0.3",
+    "fs-extra": "^11.3.2",
+    "mongoose": "^8.18.1",
+    "next": "14.1.0",
+    "next-auth": "^4.24.7",
+    "react": "^18",
+    "react-dom": "^18",
+    "tailwind-merge": "^2.2.0",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.6",
+    "postcss": "^8",
+    "prettier": "^3.6.2",
+    "tailwindcss": "^3.3.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5",
+    "wrangler": "^4.38.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,css,md}": [
+      "prettier --write"
+    ]
+  }
+}

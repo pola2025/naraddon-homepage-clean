@@ -1,0 +1,61 @@
+{
+  "// MCP (Model Context Protocol) 최적화 설정": "",
+  "// 프로젝트별 컨텍스트 관리": "",
+
+  "editor.semanticHighlighting.enabled": true,
+  "editor.suggest.insertMode": "replace",
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+
+  "// 파일 탐색 최적화": "",
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/.next": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/.git": true
+  },
+
+  "// 검색 최적화": "",
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/backups/daily/**": true,
+    "**/backups/component/**": true,
+    "**/.next": true
+  },
+
+  "// 프로젝트 특화 설정": "",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+
+  "// 태스크 러너 설정": "",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+
+  "// Git 설정": "",
+  "git.ignoreLimitWarning": true,
+
+  "// 백업 및 복원 관련 태스크": "",
+  "task.autoDetect": "on",
+
+  "// 파일 워처 설정": "",
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/backups/**": true,
+    "**/.next/**": true
+  },
+
+  "// 프로젝트 중요 디렉토리 북마크": "",
+  "workbench.editor.labelFormat": "medium",
+
+  "// 코드 스니펫 경로": "",
+  "snippetsPath": ".vscode/snippets",
+
+  "// 디버그 설정": "",
+  "debug.javascript.autoAttachFilter": "smart",
+
+  "// 확장 프로그램 권장": "",
+  "extensions.ignoreRecommendations": false
+}

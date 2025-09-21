@@ -1,0 +1,912 @@
+/* 정책자금 비교 섹션 스타일 */
+.policy-comparison-section {
+  padding: 40px 0;
+  background: linear-gradient(135deg, #f0f9f2 0%, #e8f5e9 100%); /* 연한 녹색 그라데이션 */
+  position: relative;
+  overflow: hidden;
+}
+
+.policy-comparison-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(76, 175, 80, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.policy-comparison-section .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* 나라똔 보증 강조 */
+.guarantee-highlight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(90deg, #4caf50 0%, #45a049 100%);
+  color: white;
+  padding: 15px 0;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(76, 175, 80, 0.2);
+}
+
+.guarantee-highlight i {
+  font-size: 20px;
+}
+
+/* 섹션 헤더 */
+.policy-comparison-section .section-header {
+  text-align: center;
+  margin-bottom: 30px;
+  animation: fadeInUp 0.8s ease;
+}
+
+.policy-comparison-section .main-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.policy-comparison-section .sub-title {
+  font-size: 20px;
+  color: #4caf50;
+  font-weight: 600;
+}
+
+/* 비교 테이블 컨테이너 */
+.comparison-container {
+  margin-bottom: 30px;
+  animation: fadeInUp 0.8s ease 0.2s;
+  animation-fill-mode: both;
+}
+
+.comparison-table {
+  background: white;
+  border-radius: 12px;
+  overflow: visible;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+/* 테이블 헤더 */
+.table-header {
+  display: grid;
+  grid-template-columns: 120px 1fr 1fr;
+  background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 12px 12px 0 0;
+  overflow: visible;
+  position: relative;
+}
+
+.header-cell {
+  padding: 18px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 800;
+  position: relative;
+}
+
+.header-cell.category {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.header-cell.bank {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, #757575 0%, #616161 100%);
+}
+
+.header-cell.policy {
+  position: relative;
+  overflow: visible;
+  background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.recommend-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffd700 0%, #ffa500 100%);
+  color: #333;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 900;
+  margin-left: 8px;
+  vertical-align: middle;
+  box-shadow: 0 3px 10px rgba(255, 215, 0, 0.5);
+  animation: pulse 2s ease-in-out infinite;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 3px 10px rgba(255, 215, 0, 0.5);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.7);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 2px 6px rgba(255, 107, 0, 0.4);
+    background: linear-gradient(135deg, #ff6b00 0%, #ff8c00 100%);
+  }
+  50% {
+    box-shadow: 0 2px 12px rgba(255, 107, 0, 0.8);
+    background: linear-gradient(135deg, #ff8c00 0%, #ffa500 100%);
+  }
+}
+
+.header-cell i {
+  font-size: 16px;
+}
+
+/* 테이블 바디 */
+.table-body {
+  background: white;
+}
+
+.comparison-row {
+  display: grid;
+  grid-template-columns: 120px 1fr 1fr;
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.comparison-row:hover {
+  background: #fafafa;
+}
+
+.comparison-row:last-child {
+  border-bottom: none;
+}
+
+.row-title {
+  padding: 18px 12px;
+  background: #f8f9fa;
+  font-weight: 700;
+  font-size: 16px;
+  color: #495057;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.bank-cell,
+.policy-cell {
+  padding: 20px 25px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  min-height: 60px;
+}
+
+.bank-cell {
+  border-right: 1px solid #e0e0e0;
+  justify-content: center;
+  background: linear-gradient(90deg, #f8f8f8 0%, #f0f0f0 100%);
+  opacity: 0.7;
+  position: relative;
+}
+
+.bank-cell::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(128, 128, 128, 0.05);
+  pointer-events: none;
+}
+
+.policy-cell {
+  background: linear-gradient(90deg, #f0fff0 0%, #e8f5e8 50%, #dcf5dc 100%);
+  justify-content: center;
+  position: relative;
+  animation: subtleGlow 3s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.1);
+}
+
+@keyframes subtleGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
+  }
+}
+
+.icon-negative,
+.icon-positive {
+  font-size: 20px;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.icon-negative {
+  color: #dc3545;
+}
+
+.icon-positive {
+  color: #4caf50;
+}
+
+.cell-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+  max-width: 350px;
+  flex: 1;
+}
+
+.cell-content strong {
+  font-size: 20px;
+  color: #2c3e50;
+  line-height: 1.3;
+  font-weight: 700;
+  text-align: left;
+  display: block;
+  white-space: nowrap;
+}
+
+.cell-content small {
+  font-size: 16px;
+  color: #6c757d;
+  font-weight: 500;
+  text-align: left;
+  display: block;
+  white-space: nowrap;
+}
+
+/* 플랫폼 보증 배지 */
+.platform-guarantee {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(76, 175, 80, 0.05);
+  border-radius: 15px;
+  border: 2px solid rgba(76, 175, 80, 0.2);
+}
+
+.platform-guarantee .guarantee-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background: white;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.platform-guarantee .guarantee-badge i {
+  color: #4caf50;
+  font-size: 24px;
+}
+
+.platform-guarantee .guarantee-badge span {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.platform-guarantee .guarantee-text {
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+}
+
+/* 인사이트 섹션 - 새로운 디자인 */
+.insights-section {
+  margin: 40px 0;
+  padding: 40px 30px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  animation: fadeInUp 0.8s ease 0.4s;
+  animation-fill-mode: both;
+}
+
+.insights-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.insights-header h3 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #2c3e50;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+}
+
+.insights-header .certified-icon {
+  margin-right: 10px;
+}
+
+.insights-header .guarantee-sub {
+  font-size: 18px;
+  color: #4caf50;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.insights-header h3::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffd700, #ffa500);
+  border-radius: 2px;
+}
+
+/* 숫자 카드 영역 */
+.insights-numbers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.number-card {
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 15px;
+  position: relative;
+  transition: all 0.3s ease;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.number-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.number-card.primary {
+  border-top: 4px solid #ffd700;
+}
+
+.number-card.secondary {
+  border-top: 4px solid #ffa500;
+}
+
+.number-card.alert {
+  border-top: 4px solid #ff6b6b;
+}
+
+/* 초대형 숫자 스타일 */
+.number-value {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: 15px;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.number-value .currency {
+  font-size: 24px;
+  font-weight: 600;
+  color: #6c757d;
+  margin-right: 4px;
+}
+
+.number-value .amount {
+  font-size: 52px;
+  font-weight: 900;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: countUp 2s ease-out;
+}
+
+.number-value .unit {
+  font-size: 18px;
+  font-weight: 600;
+  color: #6c757d;
+  margin-left: 4px;
+}
+
+/* 아이콘 스타일 - 배경 그림자 */
+.number-icon {
+  position: absolute;
+  font-size: 80px;
+  opacity: 0.05;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.number-card.primary .number-icon {
+  color: #ffd700;
+  opacity: 0.08;
+}
+
+.number-card.secondary .number-icon {
+  color: #ffa500;
+  opacity: 0.08;
+}
+
+.number-card.alert .number-icon {
+  color: #ff6b6b;
+  opacity: 0.08;
+}
+
+.number-label {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2c3e50;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: relative;
+  z-index: 1;
+}
+
+/* 하단 포인트 영역 */
+.insights-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 30px;
+  border-top: 2px solid #e9ecef;
+  align-items: center;
+}
+
+.insight-point {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 30px;
+  color: #495057;
+  padding-left: 20px;
+  max-width: 700px;
+  width: 100%;
+  justify-content: flex-start;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.insight-point i {
+  color: #4caf50;
+  font-size: 36px;
+  flex-shrink: 0;
+}
+
+.insight-point span {
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.vs-left {
+  text-align: right;
+  flex: 1;
+}
+
+.vs-center {
+  color: #ff6b6b;
+  font-weight: 800;
+  font-size: 1.1em;
+  flex-shrink: 0;
+}
+
+.vs-right {
+  text-align: left;
+  flex: 1;
+  color: #4caf50;
+  font-weight: 700;
+}
+
+.vs-suffix {
+  color: #495057;
+  font-weight: 600;
+  font-size: 0.9em;
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+
+/* 조건 안내 텍스트 */
+.condition-text {
+  width: 100%;
+  text-align: center;
+  padding: 8px 20px;
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+
+.condition-text small {
+  font-size: 14px;
+  color: #7f8c8d;
+  font-weight: 400;
+  line-height: 1.4;
+  display: inline-block;
+  background: rgba(108, 117, 125, 0.08);
+  padding: 6px 16px;
+  border-radius: 20px;
+}
+
+/* 카운팅 애니메이션 */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 이전 스타일 유지 (호환성) */
+.insights-grid {
+  display: none;
+}
+
+.insight-card {
+  display: none;
+}
+
+.insight-icon {
+  display: none;
+}
+
+.insight-text {
+  display: none;
+}
+
+.insight-text .highlight {
+  display: none;
+}
+
+/* 반응형 - 인사이트 섹션 */
+@media (max-width: 1400px) {
+  .insight-point {
+    font-size: 26px;
+  }
+
+  .insight-point i {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .insight-point {
+    font-size: 24px;
+  }
+
+  .insight-point i {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 992px) {
+  .insights-numbers {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .insights-section {
+    padding: 30px 20px;
+  }
+
+  .insight-point {
+    font-size: 22px;
+  }
+
+  .insight-point i {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .insights-numbers .number-value .amount {
+    font-size: 42px;
+  }
+
+  .insights-header h3 {
+    font-size: 22px;
+  }
+
+  .insights-footer {
+    gap: 12px;
+  }
+
+  .insight-point {
+    font-size: 18px;
+    white-space: normal;
+    padding-left: 10px;
+  }
+
+  .insight-point i {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .insights-numbers .number-value .amount {
+    font-size: 36px;
+  }
+
+  .number-value .currency {
+    font-size: 20px;
+  }
+
+  .number-value .unit {
+    font-size: 14px;
+  }
+
+  .number-label {
+    font-size: 16px;
+  }
+
+  .insight-point {
+    font-size: 14px;
+    white-space: normal;
+    padding-left: 5px;
+  }
+
+  .insight-point i {
+    font-size: 18px;
+  }
+}
+
+/* CTA 버튼 섹션 */
+.comparison-cta {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  animation: fadeInUp 0.8s ease 0.6s;
+  animation-fill-mode: both;
+}
+
+.cta-button {
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button.primary {
+  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+  color: white;
+  box-shadow: 0 3px 15px rgba(76, 175, 80, 0.25);
+}
+
+.cta-button.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(76, 175, 80, 0.35);
+}
+
+.policy-comparison-section .cta-button.secondary {
+  background: white !important;
+  color: #333333 !important;
+  border: 2px solid #333333 !important;
+  font-weight: 700;
+}
+
+.policy-comparison-section .cta-button.secondary:hover {
+  background: #333333 !important;
+  border-color: #333333 !important;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.cta-button i {
+  font-size: 13px;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover i {
+  transform: translateX(5px);
+}
+
+/* 애니메이션 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1200px) {
+  .cell-content strong {
+    font-size: 18px;
+  }
+
+  .cell-content small {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .cell-content strong {
+    font-size: 17px;
+  }
+
+  .cell-content small {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .policy-comparison-section {
+    padding: 30px 0;
+  }
+
+  .policy-comparison-section .main-title {
+    font-size: 28px;
+  }
+
+  .policy-comparison-section .sub-title {
+    font-size: 17px;
+  }
+
+  .table-header,
+  .comparison-row {
+    grid-template-columns: 1fr;
+  }
+
+  .header-cell.category,
+  .row-title {
+    display: none;
+  }
+
+  .header-cell,
+  .bank-cell,
+  .policy-cell {
+    padding: 15px;
+  }
+
+  .header-cell.bank {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .bank-cell {
+    border-right: none;
+    border-bottom: 2px solid #f0f0f0;
+  }
+
+  .bank-cell::before {
+    content: '🏦 일반 은행 대출';
+    display: block;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #6c757d;
+    font-size: 14px;
+  }
+
+  .policy-cell::before {
+    content: '🏛️ 정부 정책 자금';
+    display: block;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #4caf50;
+    font-size: 14px;
+  }
+
+  .insights-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .insight-card {
+    padding: 15px;
+  }
+
+  .comparison-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .cell-content strong {
+    font-size: 16px;
+    white-space: normal;
+  }
+
+  .cell-content small {
+    font-size: 13px;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 480px) {
+  .policy-comparison-section .main-title {
+    font-size: 24px;
+  }
+
+  .icon-negative,
+  .icon-positive {
+    font-size: 16px;
+  }
+
+  .cell-content strong {
+    font-size: 15px;
+    white-space: normal;
+  }
+
+  .cell-content small {
+    font-size: 12px;
+    white-space: normal;
+  }
+
+  .insight-text {
+    font-size: 14px;
+  }
+
+  .insight-text .highlight {
+    font-size: 16px;
+  }
+
+  .insight-icon {
+    font-size: 20px;
+  }
+}

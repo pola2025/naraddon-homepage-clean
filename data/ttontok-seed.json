@@ -1,0 +1,31 @@
+{
+  "posts": [
+    {
+      "legacyKey": "sample-post-1",
+      "title": "첫 상담, 어디서부터 준비해야 할까요?",
+      "category": "funding",
+      "content": "초기 운영자금 상담을 받고 싶은데 어떤 자료부터 준비해야 할지 고민입니다.",
+      "nickname": "상담준비중",
+      "tags": ["운영자금", "초기창업"],
+      "viewCount": 0,
+      "likeCount": 0,
+      "replyCount": 0,
+      "isPinned": false,
+      "isArchived": false,
+      "createdAt": "2024-09-01T09:00:00.000Z",
+      "updatedAt": "2024-09-01T09:00:00.000Z"
+    }
+  ],
+  "replies": [
+    {
+      "postLegacyKey": "sample-post-1",
+      "content": "재무제표와 최근 6개월 매출 데이터를 준비하시면 초기 미팅에 도움이 됩니다.",
+      "nickname": "이은정 노무사",
+      "role": "expert",
+      "isAccepted": false,
+      "likeCount": 0,
+      "createdAt": "2024-09-01T10:00:00.000Z",
+      "updatedAt": "2024-09-01T10:00:00.000Z"
+    }
+  ]
+}

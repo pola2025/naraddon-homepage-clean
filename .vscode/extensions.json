@@ -1,0 +1,31 @@
+{
+  "recommendations": [
+    "// 필수 확장 프로그램",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+    "formulahendry.auto-rename-tag",
+    "dsznajder.es7-react-js-snippets",
+
+    "// TypeScript 지원",
+    "ms-vscode.vscode-typescript-next",
+
+    "// Git 관련",
+    "eamodio.gitlens",
+    "mhutchie.git-graph",
+
+    "// 생산성 도구",
+    "christian-kohler.path-intellisense",
+    "christian-kohler.npm-intellisense",
+    "mikestead.dotenv",
+
+    "// 디버깅",
+    "msjsdiag.debugger-for-chrome",
+
+    "// 마크다운",
+    "yzhang.markdown-all-in-one",
+
+    "// 테마 및 아이콘",
+    "pkief.material-icon-theme"
+  ]
+}

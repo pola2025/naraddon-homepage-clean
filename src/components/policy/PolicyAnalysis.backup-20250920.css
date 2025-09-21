@@ -1,0 +1,1165 @@
+/* 정책분석 게시판 스타일 */
+.policy-analysis-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f8fafc;
+  --layout-max-width: 1280px;
+  --layout-horizontal-padding: clamp(16px, 5vw, 60px);
+  --layout-section-gap: clamp(32px, 6vw, 72px);
+  --layout-padding-inline: 16px;
+  --layout-padding-inline-lg: 60px;
+  --policy-analysis-header-offset: 80px;
+  --policy-analysis-hero-top-padding: clamp(16px, 4vw, 32px);
+  --policy-analysis-hero-bottom-padding: clamp(48px, 6vw, 88px);
+  --policy-analysis-hero-max-width: 1280px;
+  --hero-background: linear-gradient(135deg, #e8f2ff 0%, #ffffff 55%, #f8fdf9 100%);
+  --hero-overlay-radial-primary: rgba(59, 130, 246, 0.2);
+  --hero-overlay-radial-secondary: rgba(45, 212, 191, 0.18);
+  --hero-text-color: #0f172a;
+  --hero-highlight-color: #2563eb;
+  --hero-subtitle-color: #475569;
+  padding-top: 0;
+}
+
+@media (max-width: 768px) {
+  .policy-analysis-page {
+    padding-top: 0;
+  }
+}
+
+/* 정책분석 히어로 섹션 */
+.policy-analysis-hero {
+  position: relative;
+  isolation: isolate;
+}
+
+.policy-analysis-page .expert-hero {
+  position: relative;
+  margin-top: calc(-1 * var(--policy-analysis-header-offset));
+  padding-top: calc(var(--policy-analysis-header-offset) + var(--policy-analysis-hero-top-padding) - 40px);
+  padding-bottom: var(--policy-analysis-hero-bottom-padding);
+  background: var(--hero-background);
+  color: var(--hero-text-color);
+  overflow: hidden;
+}
+
+.policy-analysis-page .expert-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, var(--hero-overlay-radial-primary), transparent 55%),
+    radial-gradient(circle at 80% 20%, var(--hero-overlay-radial-secondary), transparent 60%);
+  pointer-events: none;
+}
+
+.policy-analysis-page .expert-hero .layout-container {
+  max-width: var(--policy-analysis-hero-max-width);
+  padding-left: var(--layout-padding-inline);
+  padding-right: var(--layout-padding-inline);
+}
+
+@media (min-width: 1024px) {
+  .policy-analysis-page .expert-hero .layout-container,
+  .policy-analysis__news-section,
+  .analysis-section-header,
+  .search-section,
+  .main-content,
+  .policy-analysis__cta-container {
+    padding-left: var(--layout-padding-inline-lg);
+    padding-right: var(--layout-padding-inline-lg);
+  }
+}
+
+
+.policy-analysis__news-section {
+  width: 100%;
+  max-width: var(--layout-max-width, 1280px);
+  margin: var(--layout-section-gap, clamp(32px, 6vw, 72px)) auto;
+  padding-left: var(--layout-padding-inline);
+  padding-right: var(--layout-padding-inline);
+  box-sizing: border-box;
+}
+
+.policy-analysis__news-section > * {
+  width: 100%;
+}
+
+.policy-analysis__news-section .policy-news-section {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+/* 카테고리 필터 */
+/* 검색 섹션 */
+.search-section {
+  width: 100%;
+  max-width: var(--layout-max-width, 1280px);
+  margin: clamp(24px, 4vw, 40px) auto;
+  padding-left: var(--layout-padding-inline);
+  padding-right: var(--layout-padding-inline);
+  box-sizing: border-box;
+}
+
+.search-box {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.search-box i {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 16px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 14px 20px 14px 50px;
+  border: 2px solid #e0e0e0;
+  border-radius: 30px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+/* 메인 콘텐츠 - 2단 레이아웃 */
+.policy-analysis__content {
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+  padding: clamp(32px, 5vw, 64px);
+  box-sizing: border-box;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 5vw, 48px);
+  width: 100%;
+  max-width: var(--layout-max-width, 1280px);
+  margin: clamp(24px, 4vw, 40px) auto var(--layout-section-gap, clamp(32px, 6vw, 72px));
+  padding-left: var(--layout-padding-inline);
+  padding-right: var(--layout-padding-inline);
+  box-sizing: border-box;
+}
+
+
+/* 왼쪽: TOP 5 섹션 */
+.top-section {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.section-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-header h2 i {
+  color: #ffd700;
+  font-size: 20px;
+}
+
+/* 정책분석 메인 롤링 영역 - 독립적인 클래스명 사용 */
+.analysis-main-rolling {
+  position: relative;
+  height: 500px; /* 높이 증가 */
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.analysis-rolling-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.analysis-rolling-slide.active {
+  opacity: 1;
+}
+
+.analysis-slide-image {
+  position: relative;
+  width: 100%;
+  height: 300px; /* 고정 높이로 설정 */
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.analysis-slide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.analysis-slide-overlay {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.rank-badge {
+  background: linear-gradient(135deg, #ffd700, #ffa500);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.category-badge {
+  background: rgba(76, 175, 80, 0.9);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.analysis-slide-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  justify-content: flex-start;
+  min-height: 200px;
+}
+
+.analysis-slide-content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 12px;
+  line-height: 1.4;
+  display: block; /* 변경: 제목이 잘려서 안보이는 문제 해결 */
+}
+
+.analysis-slide-content p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  display: block; /* 변경: 설명이 잘려서 안보이는 문제 해결 */
+}
+
+.analysis-slide-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.analysis-slide-meta .author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.analysis-slide-meta .author {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #333;
+  font-weight: 600;
+}
+
+.analysis-slide-meta .author-title {
+  font-size: 11px;
+  color: #999;
+  margin-left: 20px;
+}
+
+.analysis-slide-meta .views {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* 정책분석 롤링 인디케이터 */
+.analysis-rolling-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.analysis-rolling-indicators .indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.analysis-rolling-indicators .indicator.active {
+  width: 24px;
+  border-radius: 4px;
+  background: white;
+}
+
+/* TOP 2-7 그리드 - 2열 3행 구조 */
+.top-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.grid-item {
+  background: #f8f9fa;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.grid-image {
+  position: relative;
+  height: 120px; /* 높이 약간 증가 */
+  overflow: hidden;
+}
+
+.grid-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; /* 이미지 중앙 정렬 */
+}
+
+.grid-rank {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: linear-gradient(135deg, #ffd700, #ffa500);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.grid-content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: white;
+  min-height: 70px;
+}
+
+.grid-content h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-bottom: 8px;
+}
+
+.grid-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #999;
+}
+
+.grid-meta .category {
+  background: #e8f5e9;
+  color: #4caf50;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+}
+
+.grid-meta .views {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* 오른쪽: 게시글 목록 */
+.list-section {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  /* 왼쪽 영역과 동일한 높이로 고정 */
+  height: auto;
+}
+
+/* 스크롤바 스타일링 */
+.posts-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.posts-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.posts-list::-webkit-scrollbar-thumb {
+  background: #4caf50;
+  border-radius: 10px;
+}
+
+.posts-list::-webkit-scrollbar-thumb:hover {
+  background: #45a049;
+}
+
+.post-count {
+  background: #e8f5e9;
+  color: #4caf50;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* 간격 증가하여 왼쪽과 높이 맞춤 */
+  /* 스크롤 제거하고 자연스러운 높이 */
+  overflow: visible;
+}
+
+/* 개선된 리스트 아이템 - 글자 잘림 방지 */
+.list-item {
+  display: flex;
+  gap: 15px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 135px; /* 5개 항목에 맞춰 높이 증가 */
+  border: 1px solid transparent;
+}
+
+.list-item:hover {
+  background: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: #4caf50;
+}
+
+.item-thumbnail {
+  width: 130px; /* 너비 약간 증가 */
+  height: 95px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.item-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; /* 이미지 중앙 정렬 */
+}
+
+.item-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  overflow: hidden; /* 콘텐츠 영역 넘침 방지 */
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.item-category {
+  background: #e8f5e9;
+  color: #4caf50;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.item-date {
+  font-size: 12px;
+  color: #999;
+}
+
+.item-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: keep-all; /* 한글 단어 단위로 줄바꿈 */
+}
+
+.item-excerpt {
+  font-size: 14px; /* 폰트 크기 약간 증가 */
+  color: #555;
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-bottom: 12px;
+  word-break: keep-all; /* 한글 단어 단위로 줄바꿈 */
+}
+
+.item-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #777;
+  padding-top: 6px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.item-author {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.item-stats {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.item-stats i {
+  margin-right: 4px;
+  font-size: 12px;
+  color: #999;
+}
+
+.item-stats span {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* 태그 스타일 */
+.item-tags {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.item-tags .tag {
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* 작성자 정보 개선 */
+.item-author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.author-title {
+  font-size: 11px;
+  color: #999;
+  margin-left: 20px;
+}
+
+/* 더보기 버튼 */
+.load-more-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background: #f8f9fa;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.load-more-btn:hover {
+  background: #4caf50;
+  border-color: #4caf50;
+  color: white;
+}
+
+/* CTA 섹션 */
+.policy-analysis__cta-section {
+  margin: clamp(48px, 8vw, 72px) auto 0;
+}
+
+.policy-analysis__cta-container {
+  width: 100%;
+  max-width: var(--layout-max-width, 1280px);
+  margin: 0 auto;
+  padding: clamp(48px, 6vw, 80px) var(--layout-padding-inline);
+  box-sizing: border-box;
+}
+
+.policy-analysis__cta-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 1.75rem;
+  background: linear-gradient(90deg, #2563eb 0%, #3b82f6 50%, #10b981 100%);
+  color: #ffffff;
+  box-shadow: 0 32px 64px rgba(15, 23, 42, 0.25);
+}
+
+.policy-analysis__cta-content {
+  max-width: 640px;
+}
+
+.policy-analysis__cta-eyebrow {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(219, 234, 254, 0.85);
+}
+
+.policy-analysis__cta-title {
+  margin: 0.5rem 0 0;
+  font-size: clamp(1.75rem, 1.6rem + 0.6vw, 2.125rem);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.policy-analysis__cta-description {
+  margin: 0.75rem 0 0;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: rgba(219, 234, 254, 0.85);
+}
+
+.policy-analysis__cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.75rem;
+  border-radius: 9999px;
+  background: #ffffff;
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.policy-analysis__cta-button:hover,
+.policy-analysis__cta-button:focus-visible {
+  transform: translateY(-2px);
+  background: #e0edff;
+  color: #1d4ed8;
+}
+
+.policy-analysis__cta-button:focus-visible {
+  outline: 3px solid rgba(59, 130, 246, 0.45);
+  outline-offset: 3px;
+}
+
+@media (min-width: 1024px) {
+  .policy-analysis__cta-banner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .policy-analysis__cta-content {
+    max-width: 520px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .policy-analysis__cta-button {
+    width: 100%;
+  }
+}
+
+/* 글쓰기 모달 스타일 */
+.write-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.write-modal {
+  background: white;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 30px;
+  border-bottom: 2px solid #f0f0f0;
+  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+  color: white;
+  border-radius: 16px 16px 0 0;
+}
+
+.modal-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.modal-close {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-size: 18px;
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(90deg);
+}
+
+.modal-form {
+  padding: 30px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group label i {
+  margin-right: 6px;
+  color: #4caf50;
+  font-size: 13px;
+}
+
+.form-group .required {
+  color: #f44336;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+  line-height: 1.6;
+}
+
+.password-error-text {
+  margin: -4px 0 18px;
+  font-size: 0.875rem;
+  color: #e11d48;
+  font-weight: 600;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  padding-top: 20px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.btn-cancel,
+.btn-submit {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-cancel {
+  background: #f5f5f5;
+  color: #666;
+}
+
+.btn-cancel:hover {
+  background: #e0e0e0;
+}
+
+.btn-submit {
+  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+/* 모달 스크롤바 */
+.write-modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.write-modal::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.write-modal::-webkit-scrollbar-thumb {
+  background: #4caf50;
+  border-radius: 10px;
+}
+
+.write-modal::-webkit-scrollbar-thumb:hover {
+  background: #45a049;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1024px) {
+  .policy-analysis__content {
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+  padding: clamp(32px, 5vw, 64px);
+  box-sizing: border-box;
+}
+
+
+  .top-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .posts-list {
+    max-height: none;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .write-button,
+.analysis-section__write-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .main-rolling {
+    height: 300px;
+  }
+
+  .top-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cta-stats {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .list-item {
+    min-height: auto;
+    flex-direction: column;
+  }
+
+  .item-thumbnail {
+    width: 100%;
+    height: 150px;
+  }
+}
+
+/* 구분선 스타일 */
+.section-divider {
+  width: 100%;
+  max-width: var(--layout-max-width, 1280px);
+  height: 1px;
+  background: linear-gradient(to right, transparent, #e0e0e0, transparent);
+  margin: var(--layout-section-gap, clamp(32px, 6vw, 72px)) auto;
+}
+
+/* 정책분석 섹션 헤더 */
+.analysis-section-header {
+  width: 100%;
+  max-width: var(--layout-max-width, 1280px);
+  margin: 0 auto clamp(24px, 4vw, 40px);
+  padding-left: var(--layout-padding-inline);
+  padding-right: var(--layout-padding-inline);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: clamp(16px, 3vw, 32px);
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.analysis-section__write-button,
+.write-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 10px 24px rgba(255, 107, 107, 0.35);
+}
+
+.analysis-section__write-button i,
+.write-button i {
+  font-size: 16px;
+}
+
+.analysis-section__write-button:hover,
+.write-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(255, 107, 107, 0.4);
+}
+
+.analysis-section-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  min-width: 240px;
+}
+
+.analysis-title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.analysis-title i {
+  color: #4caf50;
+}
+
+.analysis-subtitle {
+  margin: 0;
+  font-size: 16px;
+  color: #6c757d;
+  line-height: 1.6;
+}
+
+@media (max-width: 576px) {
+  .top-section,
+  .list-section {
+    padding: 20px;
+  }
+
+  .grid-item {
+    min-height: 180px;
+  }
+
+  .main-rolling {
+    height: 250px;
+  }
+
+  .slide-content h3 {
+    font-size: 16px;
+  }
+
+  .cta-container h2 {
+    font-size: 28px;
+  }
+
+  .stat strong {
+    font-size: 32px;
+  }
+}
+.policy-analysis__feedback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  background-color: #f8fafc;
+  color: #1e293b;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.policy-analysis__feedback i {
+  font-size: 1.1rem;
+}
+
+.policy-analysis__feedback--loading i {
+  color: #2563eb;
+}
+
+.policy-analysis__feedback--error {
+  background-color: #fef2f2;
+  border-color: #fecaca;
+  color: #991b1b;
+}
+
+.policy-analysis__feedback--error i {
+  color: #dc2626;
+}
+
+.policy-analysis__feedback--empty {
+  border-style: dashed;
+  color: #475569;
+  background-color: #f8fafc;
+}
+
+
+
+
+

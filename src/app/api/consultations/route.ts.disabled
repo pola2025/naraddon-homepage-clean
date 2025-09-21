@@ -1,0 +1,79 @@
+import { NextRequest, NextResponse } from "next/server";
+import pb from '@/lib/pocketbase';
+import { getServerSession } from 'next-auth';
+import { authOptions } from '../auth/[...nextauth]/route';
+
+export async function GET(request: NextRequest) {
+  try {
+    const session = await getServerSession(authOptions);
+    
+    if (!session?.user) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
+    const searchParams = request.nextUrl.searchParams;
+    const page = parseInt(searchParams.get('page') || '1');
+    const perPage = parseInt(searchParams.get('perPage') || '10');
+    const status = searchParams.get('status') || '';
+
+    // 필터 조건 생성
+    let filter = '';
+    const userId = (session.user as any).id;
+    const userRole = (session.user as any).role;
+
+    if (userRole === 'admin') {
+      // 관리자는 모든 상담 조회 가능
+      filter = status ? `status = "${status}"` : '';
+    } else if (userRole === 'examiner') {
+      // 심사관은 자신에게 배정된 상담 조회
+      filter = `examiner = "${userId}"`;
+      if (status) filter += ` && status = "${status}"`;
+    } else {
+      // 일반 사용자는 자신의 상담만 조회
+      filter = `user = "${userId}"`;
+      if (status) filter += ` && status = "${status}"`;
+    }
+
+    const records = await pb.collection('consultations').getList(page, perPage, {
+      filter,
+      sort: '-created',
+      expand: 'user,examiner'
+    });
+
+    return NextResponse.json(records);
+  } catch (error) {
+    console.error('Consultations fetch error:', error);
+    return NextResponse.json(
+      { error: 'Failed to fetch consultations' },
+      { status: 500 }
+    );
+  }
+}
+
+export async function POST(request: NextRequest) {
+  try {
+    const session = await getServerSession(authOptions);
+    
+    if (!session?.user) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
+    const data = await request.json();
+    const userId = (session.user as any).id;
+
+    // 새 상담 생성
+    const record = await pb.collection('consultations').create({
+      ...data,
+      user: userId,
+      status: 'pending'
+    });
+
+    return NextResponse.json(record);
+  } catch (error) {
+    console.error('Consultation create error:', error);
+    return NextResponse.json(
+      { error: 'Failed to create consultation' },
+      { status: 500 }
+    );
+  }
+}

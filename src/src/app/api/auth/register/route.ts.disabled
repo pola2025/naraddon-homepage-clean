@@ -1,0 +1,91 @@
+import { NextRequest, NextResponse } from "next/server";
+import connectDB from '@/lib/mongodb';
+import User from '@/models/User';
+import Joi from 'joi';
+
+const registerSchema = Joi.object({
+  email: Joi.string().email().required(),
+  password: Joi.string().min(6).required(),
+  name: Joi.string().required(),
+  phone: Joi.string().required(),
+  role: Joi.string().valid('admin', 'examiner', 'company').required(),
+  companyInfo: Joi.when('role', {
+    is: 'company',
+    then: Joi.object({
+      businessNumber: Joi.string().required(),
+      companyName: Joi.string().required(),
+      region: Joi.string().required()
+    }),
+    otherwise: Joi.optional()
+  }),
+  examinerInfo: Joi.when('role', {
+    is: 'examiner',
+    then: Joi.object({
+      activeRegions: Joi.array().items(Joi.string()),
+      specialties: Joi.array().items(Joi.string()),
+      website: Joi.string().uri().optional()
+    }),
+    otherwise: Joi.optional()
+  })
+});
+
+export async function POST(request: NextRequest) {
+  try {
+    const body = await request.json();
+    
+    const { error } = registerSchema.validate(body);
+    if (error) {
+      return NextResponse.json(
+        { error: error.details[0].message },
+        { status: 400 }
+      );
+    }
+    
+    try {
+      await connectDB();
+    } catch (dbError) {
+      console.error('Database connection failed:', dbError);
+      return NextResponse.json(
+        { error: 'Database connection failed. Please try again later.' },
+        { status: 503 }
+      );
+    }
+    
+    const existingUser = await User.findOne({ email: body.email });
+    if (existingUser) {
+      return NextResponse.json(
+        { error: '이미 등록된 이메일입니다.' },
+        { status: 400 }
+      );
+    }
+    
+    if (body.role === 'company' && body.companyInfo?.businessNumber) {
+      const existingBusiness = await User.findOne({
+        'companyInfo.businessNumber': body.companyInfo.businessNumber
+      });
+      if (existingBusiness) {
+        return NextResponse.json(
+          { error: '이미 등록된 사업자번호입니다.' },
+          { status: 400 }
+        );
+      }
+    }
+    
+    const user = new User(body);
+    await user.save();
+    
+    const userResponse = user.toPublicJSON();
+    
+    return NextResponse.json({
+      message: '회원가입이 완료되었습니다.',
+      user: userResponse
+    }, { status: 201 });
+    
+  } catch (error) {
+    console.error('Registration error:', error);
+    return NextResponse.json(
+      { error: '서버 오류가 발생했습니다.' },
+      { status: 500 }
+    );
+  }
+}

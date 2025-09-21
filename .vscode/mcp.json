@@ -1,0 +1,32 @@
+{
+  "mcpServers": {
+    "eslint": {
+      "command": "npx",
+      "args": ["@eslint/mcp-server"],
+      "description": "코드 품질 검사 - JavaScript/TypeScript 문법 오류와 버그를 실시간으로 잡아냅니다"
+    },
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${env:GITHUB_TOKEN}"
+      },
+      "description": "GitHub 통합 - PR, Issues, 코드 리뷰를 AI와 함께 처리합니다"
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "H:/Naraddon/homepage"],
+      "description": "파일 시스템 접근 - AI가 프로젝트 파일을 더 잘 이해하고 조작할 수 있게 합니다"
+    },
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"],
+      "description": "컨텍스트 기억 - 대화 중 중요한 정보를 저장하고 재사용합니다"
+    },
+    "fetch": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-fetch"],
+      "description": "웹 리소스 접근 - API 문서나 외부 리소스를 실시간으로 참조합니다"
+    }
+  }
+}

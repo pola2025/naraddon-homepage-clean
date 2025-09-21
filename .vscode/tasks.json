@@ -1,0 +1,127 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "🔄 Dev Server",
+      "type": "npm",
+      "script": "dev",
+      "problemMatcher": [],
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "💾 Full Backup",
+      "type": "npm",
+      "script": "backup:full",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "📦 Component Backup",
+      "type": "shell",
+      "command": "npm run backup:component ${input:componentName}",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "🎯 Milestone Backup",
+      "type": "shell",
+      "command": "npm run backup:milestone ${input:version} \"${input:description}\"",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "📊 Backup Status",
+      "type": "npm",
+      "script": "backup:status",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "🔍 Lint Check",
+      "type": "npm",
+      "script": "lint",
+      "problemMatcher": ["$eslint-stylish"],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "🏗️ Build Project",
+      "type": "npm",
+      "script": "build",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "🚀 Deploy to Vercel",
+      "type": "npm",
+      "script": "deploy:all",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "📜 Commit History",
+      "type": "npm",
+      "script": "commit:history",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "✅ Preflight Check",
+      "type": "npm",
+      "script": "preflight",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "id": "componentName",
+      "type": "promptString",
+      "description": "컴포넌트 이름 입력"
+    },
+    {
+      "id": "version",
+      "type": "promptString",
+      "description": "버전 입력 (예: v1.0)"
+    },
+    {
+      "id": "description",
+      "type": "promptString",
+      "description": "마일스톤 설명 입력"
+    }
+  ]
+}

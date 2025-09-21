@@ -1,0 +1,116 @@
+/* 나라똔 디자인 시스템 변수 정의 - 아임웹 스타일 적용 */
+:root {
+  /* 메인 브랜드 컬러 - 아임웹과 동일하게 조정 */
+  --primary-green: #4caf50;
+  --primary-green-light: #66bb6a;
+  --primary-green-dark: #388e3c;
+  --primary-green-lighter: rgba(76, 175, 80, 0.1);
+  --primary-green-lightest: rgba(76, 175, 80, 0.03);
+
+  /* 보조 브랜드 컬러 - 오렌지/옐로우 계열 */
+  --accent-orange: #ff9800;
+  --accent-yellow: #ffc107;
+  --accent-yellow-dark: #ffa000;
+
+  /* 배경 컬러 - 따뜻하고 연한 녹색 톤 적용 */
+  --bg-primary: #f8fdf9; /* 매우 연한 녹색 (기본 배경) */
+  --bg-secondary: #f0f9f2; /* 연한 녹색 (보조 배경) */
+  --bg-tertiary: #e8f5e9; /* 좀 더 진한 연한 녹색 */
+  --bg-section: rgba(76, 175, 80, 0.05); /* 섹션 배경 */
+  --bg-warm-green: linear-gradient(135deg, #f8fdf9 0%, #e8f5e9 100%); /* 따뜻한 녹색 그라데이션 */
+  --bg-dark: #212121;
+
+  /* 텍스트 컬러 */
+  --text-primary: #333333;
+  --text-secondary: #4b4b4b;
+  --text-tertiary: #666666;
+  --text-light: #999999;
+  --text-white: #ffffff;
+
+  /* 그라데이션 - 더 부드럽게 */
+  --gradient-primary: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
+  --gradient-accent: linear-gradient(135deg, #ff9800 0%, #ffc107 100%);
+  --gradient-light: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(76, 175, 80, 0.05) 100%
+  );
+
+  /* 그림자 - 더 부드럽게 */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+  --shadow-green: 0 4px 20px rgba(76, 175, 80, 0.25);
+
+  /* 보더 */
+  --border-color: #e0e0e0;
+  --border-light: #f0f0f0;
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-2xl: 24px;
+  --border-radius-full: 9999px;
+
+  /* 트랜지션 */
+  --transition-fast: all 0.2s ease;
+  --transition-base: all 0.3s ease;
+  --transition-slow: all 0.5s ease;
+
+  /* 폰트 크기 */
+  --font-xs: 0.75rem;
+  --font-sm: 0.875rem;
+  --font-base: 1rem;
+  --font-lg: 1.125rem;
+  --font-xl: 1.25rem;
+  --font-2xl: 1.5rem;
+  --font-3xl: 1.875rem;
+  --font-4xl: 2.25rem;
+  --font-5xl: 3rem;
+  --font-6xl: 3.75rem;
+
+  /* 폰트 무게 */
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+
+  /* 간격 */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  --spacing-4xl: 6rem;
+  --spacing-5xl: 8rem;
+
+  /* Z-index */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-tooltip: 700;
+
+  /* 헤더 높이 */
+  --header-height: 70px;
+  --mobile-header-height: 60px;
+  --tagline-height: 38px;
+}
+
+/* 다크 모드 (향후 구현 시) */
+[data-theme='dark'] {
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --bg-tertiary: #2a2a2a;
+  --text-primary: #ffffff;
+  --text-secondary: #e0e0e0;
+  --text-tertiary: #a0a0a0;
+}

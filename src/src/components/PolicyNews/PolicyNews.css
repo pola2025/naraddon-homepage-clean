@@ -1,0 +1,309 @@
+/* 정책소식 섹션 */
+.policy-news-section {
+  position: relative;
+  padding: 20px 0; /* 패딩 더 줄임 */
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  overflow: visible; /* hidden에서 visible로 변경 - 이미지가 섹션 밖으로 나갈 수 있음 */
+}
+
+/* 배경 패턴 - 움직이는 그라데이션 효과 */
+.policy-news-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+  animation: floatPattern 20s ease-in-out infinite;
+  z-index: 0; /* z-index 명시 - 배경이 이미지보다 뒤에 */
+  pointer-events: none; /* 클릭 이벤트 무시 */
+}
+
+@keyframes floatPattern {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(5deg) scale(1.1);
+  }
+}
+
+.policy-news-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 48%,
+    rgba(255, 255, 255, 0.02) 49%,
+    rgba(255, 255, 255, 0.02) 51%,
+    transparent 52%
+  );
+  background-size: 30px 30px;
+  animation: movePattern 10s linear infinite;
+  z-index: 0; /* z-index 명시 - 배경이 이미지보다 뒤에 */
+  pointer-events: none; /* 클릭 이벤트 무시 */
+}
+
+@keyframes movePattern {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 30px 30px;
+  }
+}
+
+.policy-news-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+  overflow: visible; /* 컨테이너도 overflow visible 추가 */
+}
+
+/* 섹션 헤더 */
+.section-header {
+  text-align: center;
+  margin-bottom: 15px; /* 여백 더 줄임 */
+}
+
+.section-description {
+  font-size: 16px; /* 폰트 크기 더 줄임 */
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 0;
+}
+
+/* 정책 뉴스 그리드 - 더 작고 오밀조밀하게 */
+.policy-news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* 최소 크기 더 줄임 */
+  gap: 10px; /* 간격 더 줄임 */
+  overflow: visible; /* 그리드도 overflow visible 추가 */
+  padding-bottom: 20px; /* 하단 여백 추가 - 확대된 이미지가 잘리지 않도록 */
+}
+
+/* 정책 아이템 카드 */
+.policy-news-item {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px; /* 모서리 더 줄임 */
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.policy-news-item:hover {
+  transform: scale(1.5) translateZ(0);
+  z-index: 100; /* z-index를 더 높게 설정 */
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.4);
+  position: relative; /* position relative 추가 */
+}
+
+/* 이미지 컨테이너 - 1:1 비율 */
+.policy-image-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%; /* 1:1 비율 유지 */
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.policy-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 호버 시 이미지 아래쪽 검정 오버레이 추가 */
+.policy-news-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.7) 30%,
+    rgba(0, 0, 0, 0.4) 60%,
+    transparent 100%
+  );
+  transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.policy-news-item:hover::after {
+  height: 75%; /* 호버 시 아래쪽 75%까지 그라데이션 */
+}
+
+.policy-news-item:hover .policy-image {
+  transform: scale(1.1);
+}
+
+/* 정책 정보 오버레이 */
+.policy-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 10px; /* 패딩 더 줄임 */
+  transform: translateY(100%);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1; /* 오버레이 위에 표시 */
+}
+
+.policy-news-item:hover .policy-overlay {
+  transform: translateY(0);
+}
+
+.policy-title {
+  font-size: 12px; /* 폰트 크기 더 줄임 */
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+  line-height: 1.2;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* 텍스트 그림자 강화 */
+}
+
+.policy-date {
+  font-size: 10px; /* 폰트 크기 더 줄임 */
+  color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* 텍스트 그림자 강화 */
+}
+
+/* 배지 스타일 */
+.policy-badge {
+  position: absolute;
+  top: 8px; /* 위치 조정 */
+  left: 8px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 3px 6px; /* 패딩 더 줄임 */
+  border-radius: 12px;
+  font-size: 9px; /* 폰트 크기 더 줄임 */
+  font-weight: 600;
+  z-index: 2;
+  box-shadow: 0 1px 6px rgba(102, 126, 234, 0.5);
+}
+
+/* NEW 배지 */
+.badge-new {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  animation: pulse 2s infinite;
+}
+
+/* HOT 배지 */
+.badge-hot {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+/* 추천 배지 */
+.badge-recommend {
+  background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 1px 6px rgba(245, 87, 108, 0.5);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1px 10px rgba(245, 87, 108, 0.7);
+  }
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1200px) {
+  .policy-news-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .policy-news-section {
+    padding: 15px 0;
+  }
+
+  .section-description {
+    font-size: 14px;
+  }
+
+  .section-header {
+    margin-bottom: 12px;
+  }
+
+  .policy-news-grid {
+    grid-template-columns: repeat(4, 1fr); /* 모바일에서 4개씩 */
+    gap: 8px;
+  }
+
+  .policy-news-item:hover {
+    transform: scale(1.4);
+  }
+
+  .policy-title {
+    font-size: 11px;
+  }
+
+  .policy-date {
+    font-size: 9px;
+  }
+
+  .policy-badge {
+    padding: 2px 5px;
+    font-size: 8px;
+    top: 5px;
+    left: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .policy-news-grid {
+    grid-template-columns: repeat(3, 1fr); /* 작은 화면에서 3개씩 */
+    gap: 6px;
+  }
+
+  .policy-news-item {
+    border-radius: 8px;
+  }
+
+  .policy-overlay {
+    padding: 8px;
+  }
+
+  .policy-news-item:hover {
+    transform: scale(1.5); /* 작은 화면에서도 1.5배 */
+  }
+
+  .policy-title {
+    font-size: 10px;
+  }
+}

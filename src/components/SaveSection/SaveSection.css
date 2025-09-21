@@ -1,0 +1,822 @@
+/* 절약 섹션 - 플로팅 카드 디자인 */
+
+.home-save-section {
+
+  padding: 40px 0;
+
+  background: transparent;
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+
+
+
+/* 가로 레이아웃 전용 스타일 */
+
+.home-save-section.horizontal {
+
+  padding: 40px 0;
+
+  background: transparent;
+
+  position: relative;
+
+  z-index: 0;
+
+}
+
+
+
+.home-save-section .container {
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding: 40px;
+
+  background: #ffffff;
+
+  border-radius: 24px;
+
+  /* 깊이감 있는 그림자 복원 */
+
+  box-shadow:
+
+    0 1px 3px 0 rgba(0, 0, 0, 0.04),
+
+    0 1px 2px 0 rgba(0, 0, 0, 0.06),
+
+    0 4px 8px -2px rgba(0, 0, 0, 0.03),
+
+    0 20px 25px -5px rgba(0, 0, 0, 0.05);
+
+  transition: all 0.3s ease;
+
+}
+
+
+
+/* =================================== */
+
+/* 가로 레이아웃 스타일 */
+
+/* =================================== */
+
+
+
+.home-save-content {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 40px;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+}
+
+
+
+/* 왼쪽: 타이틀과 계산기 */
+
+.home-save-left {
+
+  flex: 0 0 auto;
+
+  min-width: 420px; /* 너비 통일 */
+
+}
+
+
+
+.home-coin-title-group {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 30px;
+
+}
+
+
+
+.home-coin-icon {
+
+  width: 100px;
+
+  height: 100px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+}
+
+
+
+.home-coin-icon i {
+
+  font-size: 70px;
+
+  color: #4caf50; /* 녹색으로 변경 */
+
+  z-index: 5;
+
+  position: relative;
+
+  filter: drop-shadow(0 4px 10px rgba(76, 175, 80, 0.3));
+
+}
+
+
+
+.home-coin-icon.animate i {
+
+  animation: homeSaveCoinBounce 0.6s ease-out;
+
+}
+
+
+
+@keyframes homeSaveCoinBounce {
+
+  0% {
+
+    transform: scale(0) rotate(-180deg);
+
+    opacity: 0;
+
+  }
+
+  50% {
+
+    transform: scale(1.1) rotate(10deg);
+
+  }
+
+  100% {
+
+    transform: scale(1) rotate(0deg);
+
+    opacity: 1;
+
+  }
+
+}
+
+
+
+.home-amount-badge {
+
+  position: absolute;
+
+  top: -5px;
+
+  right: -5px;
+
+  padding: 8px 10px;
+
+  background: linear-gradient(135deg, #ff6b00, #ff8c00); /* 오렌지색 유지 (강조) */
+
+  color: #fff;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  border-radius: 20px;
+
+  box-shadow: 0 4px 20px rgba(255, 107, 0, 0.6);
+
+  z-index: 100;
+
+  animation: homeSaveAmountGlow 2s ease-in-out infinite;
+
+  border: 2px solid #fff;
+
+  white-space: nowrap;
+
+}
+
+
+
+@keyframes homeSaveAmountGlow {
+
+  0%,
+
+  100% {
+
+    transform: scale(1);
+
+    box-shadow: 0 4px 16px rgba(255, 107, 0, 0.5);
+
+  }
+
+  50% {
+
+    transform: scale(1.08);
+
+    box-shadow: 0 6px 24px rgba(255, 107, 0, 0.7);
+
+  }
+
+}
+
+
+
+.home-coin-pulse {
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 200px;
+
+  height: 200px;
+
+  background: radial-gradient(circle, rgba(76, 175, 80, 0.2) 0%, transparent 70%); /* 녹색 펄스 */
+
+  border-radius: 50%;
+
+  animation: pulse 2s infinite;
+
+  z-index: 1;
+
+}
+
+
+
+@keyframes pulse {
+
+  0% {
+
+    transform: translate(-50%, -50%) scale(0.8);
+
+    opacity: 0;
+
+  }
+
+  50% {
+
+    transform: translate(-50%, -50%) scale(1.2);
+
+    opacity: 0.5;
+
+  }
+
+  100% {
+
+    transform: translate(-50%, -50%) scale(1.5);
+
+    opacity: 0;
+
+  }
+
+}
+
+
+
+.home-save-title {
+
+  font-size: 28px; /* 크기 통일 */
+
+  font-weight: 900;
+
+  color: #1a1a1a;
+
+  margin-bottom: 10px;
+
+  line-height: 1.3; /* 줄 간격 통일 */
+
+  letter-spacing: -0.02em;
+
+}
+
+
+
+.home-save-title .home-save-highlight {
+
+  background: linear-gradient(135deg, #4caf50 0%, #2e7d32 50%, #1b5e20 100%); /* 녹색 그라데이션 */
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+
+  font-weight: 900;
+
+}
+
+
+
+.home-save-subtitle {
+
+  font-size: 16px;
+
+  color: #666;
+
+  margin: 0;
+
+  font-weight: 500;
+
+}
+
+
+
+.home-save-subtitle .home-save-brand {
+
+  color: #2e7d32; /* 진한 녹색 */
+
+  font-weight: 700;
+
+}
+
+
+
+.home-save-subtitle .home-save-system {
+
+  color: #388e3c; /* 중간 녹색 */
+
+  font-weight: 600;
+
+}
+
+
+
+/* 중앙: 3개 특징 */
+
+.home-save-center {
+
+  flex: 1;
+
+  padding: 0 30px;
+
+  /* border 제거 - 그림자로 구분 */
+
+  position: relative;
+
+  padding: 0 40px;
+
+}
+
+
+
+.home-save-features {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+
+  min-width: 340px;
+
+  width: 100%;
+
+  max-width: 480px;
+
+}
+
+
+
+
+
+.home-save-item {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  min-width: 340px;
+
+  padding: 12px 24px;
+
+  background: #ffffff;
+
+  border-left: 4px solid #4caf50;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  color: #2c3e50;
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+
+}
+
+
+
+
+
+.home-save-item:hover {
+
+  transform: translateX(5px);
+
+  box-shadow: 0 3px 10px rgba(76, 175, 80, 0.15);
+
+}
+
+
+
+.home-save-item span {
+
+  white-space: nowrap;
+
+}
+
+
+
+.home-save-item i {
+
+  font-size: 20px;
+
+  color: #4caf50;
+
+  flex-shrink: 0;
+
+}
+
+
+
+.home-save-item:nth-child(1) i {
+
+  color: #66bb6a; /* 연한 녹색 */
+
+}
+
+
+
+.home-save-item:nth-child(2) i {
+
+  color: #4caf50; /* 중간 녹색 */
+
+}
+
+
+
+.home-save-item:nth-child(3) i {
+
+  color: #388e3c; /* 진한 녹색 */
+
+}
+
+
+
+/* 오른쪽: 4개 절약 항목 */
+
+.home-save-right {
+
+  flex: 0 0 auto;
+
+  min-width: 320px;
+
+}
+
+
+
+.home-save-items {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 10px;
+
+  margin-bottom: 15px;
+
+}
+
+
+
+.home-save-detail {
+
+  background: #ffffff;
+
+  padding: 12px;
+
+  border-radius: 16px;
+
+  /* 입체적인 그림자 */
+
+  box-shadow:
+
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+
+    0 4px 6px -1px rgba(0, 0, 0, 0.08),
+
+    0 8px 10px -5px rgba(0, 0, 0, 0.1);
+
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* border 제거 */
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  cursor: pointer;
+
+  transform: translateY(0);
+
+}
+
+
+
+.home-save-detail:hover {
+
+  transform: translateY(-4px);
+
+  box-shadow:
+
+    0 10px 25px -5px rgba(0, 0, 0, 0.15),
+
+    0 20px 40px -15px rgba(76, 175, 80, 0.2);
+
+  background: linear-gradient(135deg, #f0fff0 0%, #ffffff 100%);
+
+}
+
+
+
+.home-save-detail i {
+
+  font-size: 16px;
+
+  color: #4caf50; /* 녹색 아이콘 */
+
+  flex-shrink: 0;
+
+  margin-top: 2px;
+
+}
+
+
+
+.home-save-detail-text h4 {
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  color: #2c3e50;
+
+  margin: 0 0 2px 0;
+
+}
+
+
+
+.home-save-detail-text .home-save-amount {
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  color: #ff6b00; /* 오렌지색으로 강조 */
+
+  display: block;
+
+  margin-bottom: 2px;
+
+}
+
+
+
+.home-save-detail-text p {
+
+  font-size: 10px;
+
+  color: #666;
+
+  margin: 0;
+
+  line-height: 1.2;
+
+}
+
+
+
+.home-save-note {
+
+  font-size: 11px;
+
+  color: #999;
+
+  font-style: italic;
+
+  display: block;
+
+  text-align: center;
+
+  margin-top: 10px;
+
+}
+
+
+
+/* 반응형 - 가로 레이아웃 */
+
+@media (max-width: 1200px) {
+
+  .home-save-content {
+
+    gap: 30px;
+
+  }
+
+
+
+  .home-save-left {
+
+    min-width: 360px; /* 반응형 너비 통일 */
+
+  }
+
+
+
+  .home-save-right {
+
+    min-width: 280px;
+
+  }
+
+}
+
+
+
+@media (max-width: 1024px) {
+
+  .home-save-content {
+
+    flex-direction: column;
+
+    gap: 30px;
+
+  }
+
+
+
+  .home-save-left,
+
+  .home-save-center,
+
+  .home-save-right {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    min-width: auto;
+
+    padding: 0;
+
+    border: none;
+
+  }
+
+
+
+  .home-coin-title-group {
+
+    justify-content: center;
+
+  }
+
+
+
+  .home-save-center {
+
+    /* border 제거 - 배경색으로 구분 */
+
+    background: linear-gradient(180deg, #f8f8f8 0%, #fafafa 100%);
+
+    border-radius: 16px;
+
+    margin: 20px 0;
+
+    padding: 20px 0;
+
+  }
+
+
+
+  .home-save-items {
+
+    grid-template-columns: repeat(2, 1fr);
+
+    max-width: 400px;
+
+    margin: 0 auto 15px;
+
+  }
+
+}
+
+
+
+@media (max-width: 768px) {
+
+  .home-save-item span {
+
+    white-space: normal;
+
+  }
+
+  .home-save-section.horizontal {
+
+    padding: 30px 0;
+
+  }
+
+
+
+  .home-coin-icon {
+
+    width: 80px;
+
+    height: 80px;
+
+  }
+
+
+
+  .home-coin-icon i {
+
+    font-size: 50px;
+
+  }
+
+
+
+  .home-amount-badge {
+
+    font-size: 10px;
+
+    padding: 6px 8px;
+
+  }
+
+
+
+  .home-save-title {
+
+    font-size: 26px;
+
+  }
+
+
+
+  .home-save-subtitle {
+
+    font-size: 14px;
+
+  }
+
+
+
+  .home-save-item {
+
+    font-size: 14px;
+
+    padding: 10px 15px;
+
+  }
+
+
+
+  .home-save-items {
+
+    grid-template-columns: 1fr;
+
+  }
+
+}
+

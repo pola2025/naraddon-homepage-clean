@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm:*)",
+      "Bash(npm run build:*)",
+      "Bash(xargs ls:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(taskkill:*)",
+      "Bash(vercel:*)",
+      "Read(//h/Naraddon/naraddon-latest/**)",
+      "Bash(git config:*)",
+      "Bash(npm run dev:*)",
+      "Bash(npm run migrate:*)",
+      "Bash(npx tsx:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

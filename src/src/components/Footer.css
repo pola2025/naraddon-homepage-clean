@@ -1,0 +1,400 @@
+/* 나라똔 따뜻한 녹색 컬러 팔레트 */
+:root {
+  --naraddon-primary-green: #4caf50;
+  --naraddon-soft-green: #81c784;
+  --naraddon-light-green: #c8e6c9;
+  --naraddon-warm-yellow: #fff59d;
+  --naraddon-warm-orange: #ffb74d;
+  --naraddon-deep-green: #2e7d32;
+  --naraddon-text-dark: #263238;
+  --naraddon-text-medium: #607d8b;
+  --naraddon-bg-light: #fafafa;
+  --naraddon-footer-bg: #1a1f1a;
+  --naraddon-green-accent: #69f0ae;
+  --naraddon-lime-accent: #cddc39;
+}
+
+/* 푸터 섹션 - 전체 너비 배경 */
+.footer-wrapper {
+  background: var(--naraddon-footer-bg) !important;
+  color: white !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100vw !important;
+  position: relative !important;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  font-family:
+    'Pretendard',
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif !important;
+}
+
+/* 푸터 내용 컨테이너 - 중앙 정렬 */
+.footer-container {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 60px 20px 0 !important;
+}
+
+/* PC에서 footer-menu-wrapper 스타일 */
+.footer-menu-wrapper {
+  display: contents !important;
+}
+
+.footer-top {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 60px !important;
+  padding-bottom: 40px !important;
+  border-bottom: 1px solid rgba(76, 175, 80, 0.2) !important;
+  align-items: start !important;
+}
+
+/* PC에서 왼쪽 컬럼 */
+.footer-left-column {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 40px !important;
+}
+
+/* PC에서 오른쪽 서비스 메뉴 중앙 정렬 */
+.footer-menu {
+  text-align: center !important;
+}
+
+.footer-menu .footer-list {
+  display: inline-block !important;
+  text-align: left !important;
+}
+
+/* 로고 영역 - 그라디언트 텍스트 효과 추가 */
+.footer-logo {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  margin-bottom: 16px !important;
+}
+
+.footer-logo-image {
+  height: 40px !important;
+  width: auto !important;
+  transition: all 0.3s ease !important;
+  filter: brightness(0) invert(1) !important;
+}
+
+/* 나라똔 텍스트 - 따뜻한 그린 그라디언트 효과 */
+.footer-logo-text {
+  font-size: 28px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.5px !important;
+  background: linear-gradient(135deg, #69f0ae 0%, #81c784 50%, #fff59d 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  transition: all 0.3s ease !important;
+}
+
+.footer-logo:hover .footer-logo-text {
+  background: linear-gradient(135deg, #81c784 0%, #c8e6c9 50%, #cddc39 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.footer-desc {
+  color: rgba(255, 255, 255, 0.95) !important;
+  line-height: 1.8 !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  margin-top: 8px !important;
+}
+
+.footer-desc br + * {
+  margin-top: 4px !important;
+  display: inline-block !important;
+}
+
+/* 메뉴 영역 */
+.footer-title {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  margin-bottom: 20px !important;
+  color: var(--naraddon-soft-green) !important;
+}
+
+.footer-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.footer-list li {
+  margin-bottom: 12px !important;
+}
+
+.footer-list a {
+  color: rgba(255, 255, 255, 0.8) !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  font-size: 15px !important;
+}
+
+.footer-list a:hover {
+  color: var(--naraddon-green-accent) !important;
+  padding-left: 5px !important;
+}
+
+/* 연락처 영역 */
+.contact-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  margin-bottom: 14px !important;
+  font-size: 15px !important;
+}
+
+.contact-item svg {
+  width: 16px !important;
+  height: 16px !important;
+  flex-shrink: 0 !important;
+  stroke: var(--naraddon-soft-green) !important;
+}
+
+.contact-item:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* 하단 영역 */
+.footer-bottom {
+  padding: 30px 0 !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.copyright {
+  color: rgba(255, 255, 255, 0.7) !important;
+  margin: 0 !important;
+  font-size: 14px !important;
+}
+
+.footer-links {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7) !important;
+  text-decoration: none !important;
+  transition: color 0.3s ease !important;
+  font-size: 14px !important;
+}
+
+.footer-links a:hover {
+  color: var(--naraddon-green-accent) !important;
+}
+
+.footer-links .divider {
+  color: rgba(76, 175, 80, 0.4) !important;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 968px) {
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 30px !important;
+  }
+
+  .footer-bottom {
+    flex-direction: column !important;
+    gap: 20px !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-wrapper {
+    padding: 0 !important;
+  }
+
+  .footer-container {
+    padding: 40px 16px 0 !important;
+  }
+
+  .footer-top {
+    display: grid !important;
+    grid-template-columns: 1.2fr 0.8fr !important;
+    gap: 20px !important;
+    padding-bottom: 24px !important;
+    align-items: start !important;
+  }
+
+  /* 모바일에서 footer-left-column 유지 */
+  .footer-left-column {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  /* 모바일 로고 영역 */
+  .footer-info {
+    text-align: left !important;
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+    margin-bottom: 0 !important;
+  }
+
+  .footer-logo {
+    justify-content: flex-start !important;
+    margin-bottom: 8px !important;
+    gap: 12px !important;
+  }
+
+  .footer-logo-image {
+    height: 32px !important;
+  }
+
+  .footer-logo-text {
+    font-size: 22px !important;
+  }
+
+  .footer-desc {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 0 !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+  }
+
+  .footer-desc br {
+    display: inline !important;
+  }
+
+  /* 회사정보 스타일 */
+  .footer-contact {
+    text-align: left !important;
+  }
+
+  .footer-contact .footer-title {
+    font-size: 14px !important;
+    margin-bottom: 10px !important;
+    padding-top: 0 !important;
+    border-top: none !important;
+    font-weight: 600 !important;
+  }
+
+  .contact-item {
+    font-size: 12px !important;
+    margin-bottom: 6px !important;
+    gap: 6px !important;
+    word-break: keep-all !important;
+  }
+
+  .contact-item span {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .contact-item svg {
+    width: 12px !important;
+    height: 12px !important;
+  }
+
+  /* 모바일 서비스 메뉴 - 우측 배치 */
+  .footer-menu-wrapper {
+    display: block !important;
+    padding: 0 !important;
+    border-bottom: none !important;
+  }
+
+  .footer-menu {
+    text-align: left !important;
+  }
+
+  .footer-menu .footer-title {
+    font-size: 14px !important;
+    margin-bottom: 10px !important;
+    padding-top: 0 !important;
+    border-top: none !important;
+    font-weight: 600 !important;
+  }
+
+  /* 서비스 메뉴 1열 */
+  .footer-menu .footer-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+  }
+
+  .footer-list li {
+    margin-bottom: 0 !important;
+  }
+
+  .footer-list a {
+    font-size: 12px !important;
+    display: block !important;
+    padding: 2px 0 !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+  }
+
+  .footer-list a:hover {
+    padding-left: 0 !important;
+  }
+
+  /* 모바일 하단 영역 */
+  .footer-bottom {
+    padding: 20px 0 !important;
+    border-top: 1px solid rgba(76, 175, 80, 0.1) !important;
+  }
+
+  .copyright {
+    font-size: 11px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .footer-links {
+    font-size: 11px !important;
+  }
+
+  .footer-links a {
+    font-size: 11px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-desc br {
+    display: inline !important;
+  }
+
+  .footer-top {
+    grid-template-columns: 1.3fr 0.7fr !important;
+    gap: 16px !important;
+  }
+
+  /* 작은 화면에서 더 컴팩트하게 */
+  .footer-logo-image {
+    height: 28px !important;
+  }
+
+  .footer-logo-text {
+    font-size: 18px !important;
+  }
+
+  .footer-desc {
+    font-size: 12px !important;
+  }
+
+  .contact-item {
+    font-size: 11px !important;
+  }
+
+  .footer-list a {
+    font-size: 11px !important;
+  }
+}

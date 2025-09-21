@@ -1,0 +1,287 @@
+.tube-admin-page {
+  min-height: 100vh;
+  background: #f1f5f9;
+  padding: 48px 0 64px;
+}
+
+.tube-admin-container {
+  width: min(1080px, 92%);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.tube-admin-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 32px 36px;
+  box-shadow:
+    0 12px 24px -16px rgba(15, 23, 42, 0.4),
+    0 8px 16px -12px rgba(15, 23, 42, 0.25);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.tube-admin-card--compact {
+  padding: 28px 30px;
+}
+
+.tube-admin-title {
+  margin: 0 0 8px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.tube-admin-subtitle {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+.tube-admin-password-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 420px;
+  margin-top: 24px;
+}
+
+.tube-admin-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tube-admin-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.tube-admin-input {
+  width: 100%;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  color: #0f172a;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.tube-admin-input:focus {
+  outline: none;
+  border-color: rgba(4, 120, 87, 0.85);
+  box-shadow: 0 0 0 3px rgba(4, 120, 87, 0.18);
+}
+
+.tube-admin-button {
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0d9488, #059669);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 20px;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.tube-admin-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 20px 32px -18px rgba(4, 120, 87, 0.55);
+}
+
+.tube-admin-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.tube-admin-feedback {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.tube-admin-feedback--error {
+  color: #dc2626;
+}
+
+.tube-admin-feedback--success {
+  color: #047857;
+}
+
+.tube-admin-board {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.tube-admin-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.tube-admin-textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+.tube-admin-upload-box {
+  border: 1px dashed rgba(14, 116, 144, 0.4);
+  border-radius: 16px;
+  padding: 20px;
+  background: rgba(240, 249, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tube-admin-upload-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tube-admin-secondary-button {
+  border: 1px solid rgba(14, 116, 144, 0.35);
+  border-radius: 999px;
+  background: #ffffff;
+  color: #0f172a;
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.tube-admin-secondary-button:hover {
+  background: rgba(14, 116, 144, 0.08);
+  border-color: rgba(14, 116, 144, 0.5);
+}
+
+.tube-admin-preview {
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.tube-admin-preview img {
+  width: 100%;
+  display: block;
+}
+
+.tube-admin-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.tube-admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tube-admin-table th,
+.tube-admin-table td {
+  text-align: left;
+  padding: 12px 14px;
+  font-size: 0.9rem;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+.tube-admin-table th {
+  font-weight: 700;
+  color: #0f172a;
+  background: rgba(226, 232, 240, 0.5);
+}
+
+.tube-admin-table td {
+  color: #1e293b;
+}
+
+.tube-admin-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: rgba(14, 116, 144, 0.12);
+  color: #0e7490;
+}
+
+.tube-admin-status-badge--draft {
+  background: rgba(148, 163, 184, 0.2);
+  color: #475569;
+}
+
+.tube-admin-action-button {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.tube-admin-action-button--edit {
+  background: #3b82f6;
+  color: white;
+}
+
+.tube-admin-action-button--edit:hover:not(:disabled) {
+  background: #2563eb;
+}
+
+.tube-admin-action-button--delete {
+  background: #ef4444;
+  color: white;
+}
+
+.tube-admin-action-button--delete:hover:not(:disabled) {
+  background: #dc2626;
+}
+
+.tube-admin-action-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.tube-admin-empty {
+  margin: 12px 0 0;
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+@media (max-width: 768px) {
+  .tube-admin-card {
+    padding: 24px;
+  }
+
+  .tube-admin-card--compact {
+    padding: 22px;
+  }
+
+  .tube-admin-title {
+    font-size: 1.5rem;
+  }
+
+  .tube-admin-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

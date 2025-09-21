@@ -1,0 +1,316 @@
+/* IntroVideo 컴포넌트 스타일 */
+.intro-video-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  overflow: hidden;
+  background: #000;
+}
+
+/* 비디오 배경 */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+
+/* 비디오 오버레이 */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  z-index: 1;
+}
+
+/* 초록색 오버레이 (전환 효과) */
+.green-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(76, 175, 80, 0.9);
+  z-index: 3;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 자막 - 화면 중앙 */
+.video-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.85s cubic-bezier(0.4, 0, 0.2, 1);
+  max-width: min(92%, 860px);
+  padding: 0 24px;
+  word-break: keep-all;
+}
+
+
+.video-caption.visible {
+  opacity: 1;
+}
+
+.video-caption.hidden {
+  opacity: 0;
+}
+
+.main-caption {
+  font-size: 56px;
+  white-space: pre-line;
+  word-break: keep-all;
+  font-weight: 700;
+  color: white;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+  line-height: 1.35;
+  margin-bottom: 20px;
+  animation: captionFadeIn 0.5s ease-in-out;
+}
+
+
+.sub-caption {
+  font-size: 26px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  animation: captionFadeIn 0.5s ease-in-out 0.2s both;
+}
+
+@keyframes captionFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 시작 버튼 */
+.start-button-container {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  animation: buttonBounce 2s ease-in-out infinite;
+}
+
+@keyframes buttonBounce {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+.start-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 50px;
+  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 30px rgba(76, 175, 80, 0.5);
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.start-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.7s ease;
+}
+
+.start-button:hover::before {
+  left: 100%;
+}
+
+.start-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 40px rgba(76, 175, 80, 0.6);
+}
+
+.button-text {
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.start-button i {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.start-button:hover i {
+  transform: translateX(5px);
+}
+
+/* 반응형 - 태블릿 */
+@media (max-width: 1024px) {
+  .main-caption {
+    font-size: 48px;
+  }
+
+  .sub-caption {
+    font-size: 24px;
+  }
+}
+
+/* 반응형 - 모바일 */
+@media (max-width: 768px) {
+  .main-caption {
+    font-size: 42px;
+    line-height: 1.45;
+  }
+
+  .sub-caption {
+    font-size: 22px;
+  }
+
+  .video-caption {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 12px;
+  }
+
+  .start-button {
+    padding: 18px 38px;
+    font-size: 17px;
+  }
+
+  .button-text {
+    font-size: 17px;
+  }
+
+  .start-button-container {
+    bottom: 62px;
+  }
+}
+
+
+
+
+/* 영상 로드 실패 시 대체 콘텐츠 */
+.video-fallback {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+.video-fallback h1 {
+  font-size: 72px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.video-fallback p {
+  font-size: 24px;
+  font-weight: 400;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* 반응형 - 소형 모바일 */
+@media (max-width: 576px) {
+  .main-caption {
+    font-size: 34px;
+    margin-bottom: 18px;
+    line-height: 1.52;
+  }
+
+  .sub-caption {
+    font-size: 20px;
+  }
+
+  .video-caption {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .start-button {
+    padding: 16px 32px;
+    font-size: 15px;
+  }
+
+  .button-text {
+    font-size: 15px;
+    letter-spacing: 0.6px;
+  }
+
+  .start-button i {
+    font-size: 15px;
+  }
+
+  .start-button-container {
+    bottom: 56px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
