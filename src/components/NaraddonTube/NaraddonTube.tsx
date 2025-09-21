@@ -347,7 +347,8 @@ const NaraddonTube: React.FC<NaraddonTubeProps> = () => {
           {hasEntries && (
             <div className="youtube-style-grid">
               {entries.map((item) => {
-                const mainThumbnail = item.thumbnailUrl || (item.videos[0] ? `https://img.youtube.com/vi/${item.videos[0].youtubeId}/hqdefault.jpg` : '');
+                // 메인 썸네일은 업로드된 썸네일만 사용
+                const mainThumbnail = item.thumbnailUrl || '';
                 const isExpanded = expandedThumb === item._id;
 
                 return (
@@ -367,23 +368,21 @@ const NaraddonTube: React.FC<NaraddonTubeProps> = () => {
                           alt={item.title}
                           className="thumbnail-image"
                           onError={(e) => {
-                            if (item.videos[0]) {
-                              e.currentTarget.src = `https://img.youtube.com/vi/${item.videos[0].youtubeId}/hqdefault.jpg`;
-                            }
+                            console.error('[NaraddonTube] Thumbnail load failed:', item.thumbnailUrl);
                           }}
                         />
                       </div>
                       <div className="thumbnail-info">
                         <h3 className="thumbnail-title">{item.title}</h3>
                         <p className="video-count">
-                          {item.videos.length > 0 ? `${item.videos.length}개 영상` : '영상 준비중'}
+                          {item.videos && item.videos.length > 0 ? `${item.videos.length}개 영상` : '영상 준비중'}
                         </p>
                       </div>
                     </div>
 
                     {isExpanded && (
                       <div className="expanded-videos">
-                        {item.videos.length > 0 ? (
+                        {item.videos && item.videos.length > 0 ? (
                           <div className="videos-grid">
                             {item.videos.map((video) => (
                             <div
