@@ -57,9 +57,15 @@ export function sanitizeFileName(filename: string) {
 export function buildR2ObjectUrl(key: string, bucketName: string = defaultBucket || ''): string {
   const normalizedKey = key.startsWith('/') ? key.slice(1) : key;
 
-  // R2 Public 도메인 환경변수 사용 또는 기본값
-  const publicDomain = process.env.CLOUDFLARE_R2_PUBLIC_DOMAIN ||
-                      `https://pub-b520cb8ed3989e8182bdb020ade36495.r2.dev`;
+  // R2 Public 도메인 환경변수 사용
+  // 주의: 이 도메인은 환경변수로 관리되어야 함
+  const publicDomain = process.env.CLOUDFLARE_R2_PUBLIC_DOMAIN;
+
+  if (!publicDomain) {
+    console.warn('[R2] CLOUDFLARE_R2_PUBLIC_DOMAIN is not set');
+    // Fallback to a placeholder (won't work but won't expose the URL)
+    return `https://r2-public-domain-not-configured/${normalizedKey}`;
+  }
 
   // Public URL 반환
   return `${publicDomain}/${normalizedKey}`;
