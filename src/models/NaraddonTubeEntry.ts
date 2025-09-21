@@ -68,11 +68,8 @@ const naraddonTubeEntrySchema = new Schema<INaraddonTubeEntry>(
     },
     videos: {
       type: [naraddonTubeVideoSchema],
-      validate: {
-        validator: (videos: INaraddonTubeVideo[]) => Array.isArray(videos) && videos.length === 2,
-        message: '영상 링크는 반드시 2개여야 합니다.',
-      },
-      required: true,
+      default: [],
+      required: false,
     },
     isPublished: {
       type: Boolean,
