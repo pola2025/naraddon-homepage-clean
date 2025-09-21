@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { connectDB } from '@/lib/mongodb';
+import clientPromise from '@/lib/mongodb-client';
 import { deleteR2Object } from '@/lib/r2';
 import { ObjectId } from 'mongodb';
 
@@ -107,7 +107,8 @@ export async function PUT(request: NextRequest) {
       }
     }
 
-    const db = await connectDB();
+    const client = await clientPromise;
+    const db = client.db('naraddon');
     const collection = db.collection('naraddon-tube');
 
     const updateData = {

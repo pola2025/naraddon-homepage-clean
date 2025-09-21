@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { connectDB } from '@/lib/mongodb';
+import clientPromise from '@/lib/mongodb-client';
 import { deleteR2Object } from '@/lib/r2';
 import { ObjectId } from 'mongodb';
 
@@ -33,7 +33,8 @@ export async function DELETE(request: NextRequest) {
       );
     }
 
-    const db = await connectDB();
+    const client = await clientPromise;
+    const db = client.db('naraddon');
     const collection = db.collection('naraddon-tube');
 
     // 먼저 엔트리를 찾아서 썸네일 URL 확인
