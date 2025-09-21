@@ -50,12 +50,16 @@ export default function CertifiedExaminersPage() {
     try {
       setIsLoading(true);
       setFetchError(null);
+      console.log('[CertifiedExaminers] Fetching examiners...');
       const response = await fetch('/api/expert-services/examiners', { cache: 'no-store' });
+      console.log('[CertifiedExaminers] Response status:', response.status);
       if (!response.ok) {
-        throw new Error('인증 기업심사관 정보를 불러오지 못했습니다.');
+        throw new Error(`인증 기업심사관 정보를 불러오지 못했습니다. (Status: ${response.status})`);
       }
       const data = await response.json().catch(() => null);
+      console.log('[CertifiedExaminers] Data received:', data);
       const list = Array.isArray(data?.examiners) ? (data.examiners as ExaminerProfile[]) : [];
+      console.log('[CertifiedExaminers] Examiners count:', list.length);
       setExaminers(list);
     } catch (error) {
       console.error('[CertifiedExaminers] fetch', error);
